@@ -1,0 +1,102 @@
+.step h2 {
+    color: #1363ff;
+    font-weight: 800;
+    font-size: 2.2em;
+    margin-top: 1em;
+}
+.step label {
+    margin-left: 0;
+}
+.step p {
+    margin: 1em 0;
+    color: rgba(0, 0, 0, 0.38);
+    font-weight: 600;
+}
+.step h2, p {
+    text-transform: capitalize;
+
+}
+.step label {
+    font-size: 19px;
+    margin-bottom: 0.3em;
+    font-weight: 500;
+}
+.step input[type=text],
+.step input[type=date],
+.step [type=password] {
+    border: 3px solid #C5D8FF;
+    height: 4.5em;
+    border-radius: 10px;
+    width: 90%;
+    margin-bottom: 3em;
+    padding-left: 0.4em;
+    /* margin-left: -10%; */
+}
+.step input[type=date] {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    padding-right: 0.8em;
+}
+
+.step ::-webkit-input-placeholder {
+    color: #979797;
+    font-size: 16px;
+}
+.step div, .step form {
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+}
+#gender_step label {
+    margin-top: 1.5em;
+    margin-left: 1em;
+}
+.blank {
+    display: none;
+}
+
+/* avatar */
+.avatar_group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.avatar_group img {
+    margin: 1em 1.5em 1em 0;
+    width: 8em;
+}
+.get_email button {
+    width: 120%;
+    margin-left: 0;
+}
+
+.verify_email {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.verify_email div {
+    text-align: center;
+    width: 500px;
+}
+.verify_email button {
+    width: 84%;
+}
+
+.verify_email p {
+    font-size: 1em;
+    width: 70%;
+    text-align: center;
+    margin-left: 15%;
+    margin-top: -1.4em;
+    margin-bottom: 3em;
+}
+
+#create_password button {
+    width: 90%;
+    margin-left: 0;
+}

@@ -1,0 +1,71 @@
+/* collect data section */
+/* #collect_data {
+    margin-top: 25%;
+} */
+.data_wrap {
+    display: flex;
+    flex-direction: column;
+}
+.collect_data {
+   display: flex;
+   justify-content: center;
+   background-color: #0057ff;
+   height: 100vh;
+   overflow: hidden;
+   /* margin-top: 5%; */
+}
+.collect_data .data_wrap .logo_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.collect_data .data_wrap .logo_wrap img{
+    width: 60px;
+}
+
+#collect_data {
+    /* margin-top: 25%; */
+    background-color: #fff;
+    padding: 3em 5em;
+    height: 70vh;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+#collect_data form {
+    border: none;
+}
+.preapp {
+    margin-top: 10%;
+}
+.preapp img {
+    width: 100%;
+    height: 63%;
+}
+/* modal section */
+
+/* .coll.modal_content_wrap img {
+    width: 200px;
+} */
+
+/* .collect_data .ReactModal__Content .ReactModal__Content--after-open {
+   height: 50vh !important;
+} */
+.next_btn {
+    width: 90%;
+    margin-left: 0%;
+    margin-top: 1em;
+}
+
+.css-1hv8oq8-MuiStepLabel-label {
+    display: none !important;
+}
+.css-117w1su-MuiStepIcon-text {
+    display: none !important;
+}
+.css-m5vj9m-MuiStepper-root {
+    margin-bottom: 5em;
+}

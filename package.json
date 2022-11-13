@@ -1,14 +1,28 @@
 {
-  "name": "my-app",
+  "name": "property",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.10",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/node": "^18.11.4",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-modal": "^3.13.1",
+    "bootstrap": "^5.2.1",
+    "envars": "^0.4.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^3.1.4",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "recoil": "^0.7.6",
+    "typescript": "^4.8.4",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.5.3",
     "workbox-broadcast-update": "^6.5.3",
@@ -21,8 +35,12 @@
     "workbox-range-requests": "^6.5.3",
     "workbox-routing": "^6.5.3",
     "workbox-strategies": "^6.5.3",
-    "workbox-streams": "^6.5.3"
+    "workbox-streams": "^6.5.3",
+    "zx": "^7.1.1"
   },
+  "workspaces": [
+    "src"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -46,5 +64,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "envars": {
+    "cwd": "./env"
   }
 }
