@@ -21,7 +21,7 @@
 
 .building .bg {
     height: 100vh;
-    width: 115%;
+    width: 110%;
 
 }
 
@@ -35,6 +35,7 @@
 
 .building .logo {
     margin-right: 1em;
+    width: 58px;
 }
 
 .wrapper {
@@ -119,3 +120,103 @@
         font-size: 1em;
     } */
 }
+
+/* new */
+/* modal section */
+.modal_content_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0em;
+    padding: 3em;
+}
+
+.modal_content_wrap h2 {
+    color: #1363ff;
+    font-weight: 800;
+    font-size: 2.2em;
+    margin-top: 1em;
+}
+
+.modal_content_wrap button {
+    width: 90%;
+    margin-left: 0%;
+}
+
+.ReactModal__Content .ReactModal__Content--after-open {
+    overflow: hidden !important;
+}
+
+.myModal {
+    background-color: #fff;
+    width: 50%;
+    height: 430px;
+    margin-left: 50% !important;
+    right: auto;
+    bottom: auto;
+    margin-top: 25%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modal_content_wrap .subtitle {
+    text-align: center;
+}
+@media (max-width: 1150px) {
+  
+
+   .css-m5vj9m-MuiStepper-root {
+        width: 80%;
+    }
+
+    .myModal {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .ReactModal__Content .ReactModal__Content--after-open {
+        left: 50% !important;
+        width: 50% !important;
+    }
+    .ReactModal__Overlay {
+        background-color: #fff !important;
+    }
+
+}
+
+@media (max-width: 620px) {
+    div.MuiStepper-root.MuiStepper-horizontal.css-m5vj9m-MuiStepper-root {
+        display: none;
+    }
+
+    .myModal {
+        left: 0 !important;
+        width: 100% !important;
+        position: absolute !important;
+        bottom: -25% !important;
+        border-radius: 30px 30px 0 0;
+    }
+    
+}
+
+
+@media (max-width: 540px) {
+    .myModal {
+        height: 470px !important;
+        bottom: -32% !important;
+    }
+    .myModal .subtitle {
+        font-size: 14px;
+    }
+}
+@media (max-width: 520px) and (max-height: 750px) {
+    .myModal {
+        bottom: -40% !important;
+    }
+    
+}
+
+
+

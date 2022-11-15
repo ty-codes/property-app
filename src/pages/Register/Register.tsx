@@ -7,6 +7,21 @@ import { Interface } from "readline";
 import Modal from 'react-modal';
 import success from '../../assets/success.svg';
 
+// const customStyles = {
+//     content: {
+//         width: '29%',
+//         height: '430px',
+//         left: '77%',
+//         right: 'auto',
+//         bottom: 'auto',
+//         marginTop: '25%',
+//         transform: 'translate(-50%, -50%)',
+//         padding: 0,
+//         overflow: "hidden",
+//         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+//     },
+// };
+
 const customStyles = {
     content: {
         width: '29%',
@@ -17,7 +32,6 @@ const customStyles = {
         marginTop: '25%',
         transform: 'translate(-50%, -50%)',
         padding: 0,
-        overflow: "hidden",
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
     },
 };
@@ -56,9 +70,7 @@ export default function Register({ isVerified, setIsVerified, uid, setUid }:
         accessType: access,
         isUser: isUser
     }
-    function closeModal() {
-        setIsOpen(false);
-    }
+    
 
     const emailAccess = (): JSX.Element => {
         return (
@@ -186,9 +198,9 @@ export default function Register({ isVerified, setIsVerified, uid, setUid }:
                             <input type='text' maxLength={1} className='dgt4' onChange={(e: React.ChangeEvent<HTMLInputElement>) => { code[3] = e.target.value; setCode(code) }} />
 
                         </div>
-                        <p>Didn't receive any code?
-                            <Link className="link" to='/'>  Request again</Link>
-                        </p>
+                        <p>Didn't receive any code?</p>
+                         <p><Link className="link" to='/'>  Request again</Link></p>   
+                        
                         <button type="submit" className='btn filled_btn'>Verify</button>
                     </form>
 
@@ -246,9 +258,11 @@ export default function Register({ isVerified, setIsVerified, uid, setUid }:
 
 
                                                     </div>
-                                                    <p className="register_link">Already have an account? <Link className='link' to="/signin" >Sign in</Link></p>
+                                                    {/* <p className="register_link">Already have an account? <Link className='link' to="/signin" >Sign in</Link></p> */}
 
                                                 </form>
+                                                <p className="register_link">Already have an account? <Link className='link' to="/signin" >Sign in</Link></p>
+
 
 
                                             </>
@@ -265,16 +279,19 @@ export default function Register({ isVerified, setIsVerified, uid, setUid }:
                             // isOpen={modalIsOpen}
                             isOpen={show}
                             // onAfterOpen={afterOpenModal}
-                            onRequestClose={closeModal}
+                            onRequestClose={() => setShow(false)}
                             shouldCloseOnOverlayClick={false}
                             style={customStyles}
                             className="myModal"
                             contentLabel="Example Modal"
+                        
                         >
                             <div className="modal_content_wrap">
                                 <img src={success} alt="success_icon" />
-                                <h2>Success</h2>
-                                <p>Your data has been verified successfully</p>
+                                <h2 className="main_text" style={{ margin: '1.8em 0 0 0' }}>Success</h2>
+                                <p className="subtitle capitalize">Your data has been verified successfully</p>
+                                {/* <h2>Success</h2> */}
+                                {/* <p>Your data has been verified successfully</p> */}
                                 <button className="btn filled_btn" onClick={() => { setIsVerified(true) }}>Continue</button>
 
                             </div>
