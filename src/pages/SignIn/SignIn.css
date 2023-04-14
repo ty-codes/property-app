@@ -1,0 +1,96 @@
+.page label {
+    text-align: left;
+    margin-bottom: -1em;
+    color: #464646;
+    font-size: 0.8em;
+    width: 25em;
+}
+
+.tabs {
+    width: 20em;
+    display: flex;
+    justify-content: center;
+    margin: 1em auto;
+}
+/* divider section */
+.divider {
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+    justify-content: center;
+}
+
+.divider div {
+    width: 100px;
+    height: 1px;
+    background-color: rgb(197, 204, 202);
+}
+
+.divider span {
+    padding: 0px 10px;
+    font-weight: bold;
+}
+
+/* input[type=email], input[type=password], input[type=text] {
+    border: 3px solid #C5D8FF;
+    height: 3.5em;
+    border-radius: 10px;
+    width: 90%;
+    margin-bottom: 1em;
+    padding-left: 1em;
+    margin-left: 5%;
+} */
+
+.link {
+    color: #1363FF;
+    text-decoration: none;
+}
+
+.register_link {
+    color: #64748B;
+    margin-top: 2em;
+}
+
+/* phone section */
+
+
+/* mobile design */
+
+@media (max-width: 950px) {
+    .heading {
+        margin-top: -4%;
+    }
+
+}
+
+@media (max-width: 640px) {
+    form {
+        width: auto;
+    }
+}
+
+@media (max-width:550px) {
+
+    .verify input {
+        padding-left: 0.8em;
+    }
+    .verify {
+        width: 300px;
+    }
+
+    .verify .code input {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5em;
+    }
+
+    .verify .code {
+        justify-content: space-evenly;
+    }
+
+}
+
+
+@media (max-width: 340px) {
+    .tabs {width: 17.7em;}
+}
