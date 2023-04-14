@@ -1,0 +1,110 @@
+.level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.level h2 {
+    color: #1363ff;
+    font-weight: 800;
+    font-size: 2.2em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.step p {
+    margin: 1em 0;
+    color: rgba(0, 0, 0, 0.38);
+    font-weight: 600;
+}
+.step h2, p {
+    text-transform: capitalize;
+    text-align: center;
+ 
+}
+
+/* .step ::-webkit-input-placeholder {
+    font-size: 0.8em;
+} */
+
+.blank {
+    display: none;
+}
+
+/* avatar */
+.avatars {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.avatars img {
+    margin: 1em 1.5em 1em 0;
+    width: 6em;
+    border-radius: 50%;
+}
+.get_email button {
+    width: 120%;
+    margin-left: 0;
+}
+
+.verify_email {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.verify_email div {
+    text-align: center;
+    width: 500px;
+}
+.verify_email button {
+    width: 84%;
+}
+
+.verify_email p {
+    font-size: 1em;
+    width: 70%;
+    text-align: center;
+    margin-left: 15%;
+    margin-top: -1.4em;
+    margin-bottom: 3em;
+}
+
+#create_password button {
+    width: 90%;
+    margin-left: 0;
+}
+
+@media (max-width: 900px) {
+    .level h2{
+        font-size: 1.6em;
+    }
+}
+@media (max-width: 450px) {
+    .avatars img {
+        width: 4em;
+    }
+
+    .level {
+        align-items: baseline;
+    }
+    .level .btn {
+        align-self: baseline;
+    }
+    .avatars {
+        place-content: baseline;
+    }
+}
+@media (max-width: 400px) {
+    .level p {
+        font-size: 1em;
+    }
+    .level h2{
+        font-size: 1.3em;
+    }
+    .level .preapp-hero {
+        width: inherit;
+    }
+}
