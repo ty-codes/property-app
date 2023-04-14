@@ -17,8 +17,10 @@ declare module '*.gif' {
 }
 
 declare module '*.svg' {
+    import React = require('react');
+    export const ReactComponent: React.FunctionComponent<React.SVGProps<SVGSVElement>>;
     const src: string;
-    export default src
+    export default src;
 }
 declare module '*.jpg' {
     const src: string;

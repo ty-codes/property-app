@@ -10,12 +10,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: Metropolis, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 @media (max-width: 950px) {
   body .ReactModal__Content .ReactModal__Content--after-open {
       color: red !important;
