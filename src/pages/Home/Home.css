@@ -1,0 +1,18 @@
+
+.outlet .header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* @media (min-width: 1160px) and (max-width:1500px) {
+    .outlet .header-wrapper {
+        flex-wrap: nowrap;
+    }
+} */
+
+@media (min-width:1150px) {
+    .outlet .header-wrapper {
+        flex-wrap: nowrap;
+    }
+}

@@ -1,0 +1,101 @@
+.data_wrap {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.preapp {
+    margin-top: 10%;
+    overflow: hidden;
+}
+
+.preapp img {
+    width: 100%;
+    height: 63%;
+}
+
+.css-1hv8oq8-MuiStepLabel-label {
+    display: none !important;
+}
+
+.css-117w1su-MuiStepIcon-text {
+    display: none !important;
+}
+
+.css-m5vj9m-MuiStepper-root {
+    width: 80%;
+    margin: auto auto 1em;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+    height: 9px !important;
+}
+
+.ring {
+    border: 2px solid #1363ff;
+}
+
+#details {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f9f9f9;
+}
+
+.details {
+    background-color: #f9f9f9;
+    height: 100%;
+    width: 100vw;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.details>div {
+    background-color: #fff;
+    width: 55%;
+    margin: auto;
+    padding: 30px;
+}
+
+.logo-wrap {
+    display: flex;
+    /* background-color: #f9f9f9; */
+    background-color: transparent;
+    position: absolute;
+    flex-direction: row;
+    justify-content: left;
+    padding: 20px;
+    margin-bottom: 0;
+    height: 100px;
+}
+
+.logo-wrap img {
+    width: 58px;
+}
+
+.logo-wrap span {
+    margin: auto 1em;
+    color: #1363ff;
+    font-weight: 800;
+}
+
+@media (max-width: 768px) {
+    .details>div {
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    .details>div {
+        width: 100%;
+        height: 100vh;
+        padding: 15px;
+        padding-top: 30%;
+    }
+    .finish {
+        place-content: baseline !important;
+    }
+    .logo-wrap {
+        display: none;
+    }
+}
