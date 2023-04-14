@@ -1,0 +1,78 @@
+.sg-stock {
+    padding: 20px;
+    border: 0.8px solid #c5d8ff;
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.sg-stock .company {
+    display: flex;
+    gap: 4px;
+}
+.sg-stock img {
+    width: 40px;
+    height: 40px;
+}
+.sg-stock .logo {
+    border: 0.8px solid #c5d8ff;
+    border-radius: 6px;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+}
+
+.sg-stock h4 {
+    font-size: 17px;
+    text-transform: capitalize;
+    color: #272728;
+    text-align: left;
+}
+
+.sg-stock p {
+    font-size: 10px;
+    color: #464646;
+    text-transform: lowercase;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+.sg-stock h5 {
+    margin: 1em;
+    font-size: 16px;
+}
+
+.arrow {
+    background-color: #17df4d;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow svg {
+    width: 17px;
+    height: 17px;
+}
+
+.sg-stock .percentage {
+    font-size: 17px;
+    color: #17df4d;
+    font-weight: 600;
+    margin: 0;
+
+}
+
+.margin {
+    text-align: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    gap: 5px;
+}
