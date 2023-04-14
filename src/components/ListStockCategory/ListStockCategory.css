@@ -1,0 +1,28 @@
+#stock-category {
+    margin: 2.5em 0;
+}
+
+.property-category {
+    border: 1px solid #aaa;
+    padding: 20px;
+    margin: 1em 0;
+    border-radius: 5px;
+    
+}
+
+.investment-category {
+    border: 1px solid #aaa;
+    padding: 20px;
+    margin: 1em 0;
+    border-radius: 5px;
+}
+
+.select__placeholder, .select__menu {
+    color: #464646;
+    font-size: 0.7em;
+}
+
+.css-13cymwt-control {
+    border: 1px solid #c5d8ff;
+    background-color: rgba(0,87,255,0.02) !important;
+}
