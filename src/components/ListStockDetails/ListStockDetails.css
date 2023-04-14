@@ -1,0 +1,42 @@
+#stock-details {
+    margin: 2.5em 0;
+}
+
+.key-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #aaa;
+    padding: 20px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+.key-details span div {
+    margin: 0;
+    width: 11em;
+}
+
+.key-details span {
+    margin: 1em;
+    width: 5em;
+}
+
+.other-details {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #aaa;
+    padding: 20px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+.other-details div div {
+    margin: 0;
+    width: 100%;
+}
+
+.other-details div {
+    margin: 1em 0;
+
+}
