@@ -1,0 +1,13 @@
+#stock-review textarea {
+    height: 200px;
+    background-color: #fafafa;
+    width: 100%;
+    border: none;
+    color: #131313;
+    border-radius: 4px;
+
+}
+
+#stock-review textarea:focus, #stock-review textarea:active {
+    outline: 1px solid #c5d8ff;
+}

@@ -1,0 +1,39 @@
+.product_image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 80px;
+    margin: 0.5em;
+}
+
+#stock-dropzone {
+    margin: 2.5em 0;
+}
+
+#stock-dropzone span {
+    color: #1363ff;
+    font-size: 0.7em;;
+}
+.stock_images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dropzone {
+    background-color: #fafafa;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin: 0.5em 0;
+    font-weight: 600;
+}
+
+.error-msg {
+    font-size: 0.7em;
+    color: red;
+    text-align: left;
+}
+
+#list-stock button[type=submit] {
+background-color: red;
+}
