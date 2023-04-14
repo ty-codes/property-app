@@ -1,0 +1,45 @@
+.theme-header {
+    height: 300px;
+    width: 100%;
+    background-image: url(../../assets/curve.png);
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.theme-header h1 {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: left;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.theme-header img {
+    width: 200px;
+    height: 200px;
+}
+
+.theme-header p {
+    font-weight: lighter;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: left;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.themes {
+    margin: 2em 0;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 0.8em;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
