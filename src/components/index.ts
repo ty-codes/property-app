@@ -6,7 +6,7 @@ import SuccessMessage from "./IdentificationSteps/SuccessMessage";
 import Building from "./Building";
 import PreApp from "./PreApp/PreApp";
 import Loading from "./Loading";
-import CustomInput from "./CustomInput/CustomInput";
+import CustomInput from "./CustomInput";
 import DateOfBirth from "./DetailsSteps/DateOfBirth";
 import Name from "./DetailsSteps/Name";
 import Gender from "./DetailsSteps/Gender";
@@ -20,13 +20,13 @@ import MaritalStatus from "./Onboarding/MaritalStatus";
 import Nationality from "./Onboarding/Nationality";
 import NavBar from "./Navbar";
 import Logo from "./Logo/Logo";
-import Categories from "./Categories/Categories";
-import StockAdvisor from "./StockAdvisor/StockAdvisor";
+import Categories from "./Categories";
+import StockAdvisor from "./StockAdvisor";
 import Card from "./Card";
-import TopMovers from "./TopMovers/TopMovers";
-import DataLink from "./DataLink/DataLink";
-import StockOfTheMonth from "./StockOfTheMonth/StockOfTheMonth";
-import Stocks from "./Stocks/Stocks";
+import TopMovers from "./TopMovers";
+import DataLink from "./DataLink";
+import StockOfTheMonth from "./StockOfTheMonth";
+import Stocks from "./Stocks";
 import Stock from "./Stock/Stock";
 import ModalGroup from "./ModalGroup/ModalGroup";
 import ListStock from "./ListStock/ListStock";
@@ -36,10 +36,10 @@ import ListStockDocuments from "./ListStockDocuments/ListStockDocuments";
 import ListStockImages from "./ListStockImages/ListStockImages";
 import ListStockDetails from "./ListStockDetails/ListStockDetails";
 import ListStockReview from "./ListStockReview/ListStockReview";
-import News from "./News/News";
+import News from "./News";
 import Calculator from "./Calculator/Calculator";
-import PerformanceCard from "./PerformanceCard/PerformanceCard";
-import InsightsCard from "./InsightsCard";
+import PerformanceCard from "./PerformanceCard";
+import TransactionCard from "./TransactionCard";
 
 export {
     IdVerification,
@@ -83,5 +83,5 @@ export {
     Calculator,
     News,
     PerformanceCard,
-    InsightsCard
+    TransactionCard
 }
