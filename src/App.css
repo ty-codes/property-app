@@ -39,7 +39,7 @@ h6 {
     padding-inline: 8px;
 }
 
-.outlet ::-webkit-scrollbar {
+/* .outlet ::-webkit-scrollbar {
     width: 1px;
     height: 1px;
 }
@@ -51,9 +51,11 @@ h6 {
 
 .outlet ::-webkit-scrollbar-thumb {
     background-color: #1363FF;
+} */
+
+.outlet ::-webkit-scrollbar {
+    display: none;
 }
-
-
 
 
 .homepage,
