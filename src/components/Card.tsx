@@ -60,12 +60,13 @@ const Wrapper = styled.div<IWrapper>`
     background-image: url(${props => props.bg});
     border-radius: 10px;
     color: white;
-    // height: 280px; 
-    margin: 1em;
+    height: 280px; 
+    // margin: 1em;
     position: relative;
+    margin: 0.5em 0.5em 0.5em 0;
 
     @media (min-width: 1100px) {
-        width: 31%;
+        width: 40%;
     }
     
     @media (max-width: 520px) {
@@ -95,6 +96,7 @@ const Details = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    align-items: end;
 
     .outlined {
         border: 1px solid ${props => props.theme.primaryColor};

@@ -1,4 +1,4 @@
-import CustomInput from "../CustomInput/CustomInput";
+import CustomInput from "../CustomInput";
 import "./ListStockDetails.css";
 
 export default function ListStockDetails(): JSX.Element {
