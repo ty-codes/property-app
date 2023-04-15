@@ -1,7 +1,7 @@
 import {
     Categories, StockAdvisor, Card, TopMovers,
     DataLink, StockOfTheMonth, Stocks, Calculator,
-    News, PerformanceCard, InsightsCard,
+    News, PerformanceCard, TransactionCard,
 }
     from "../../components";
 import styled from "styled-components";
@@ -15,7 +15,7 @@ export default function Home() {
             <div className="header-wrapper">
                 <Card />
                 <PerformanceCard />
-                <InsightsCard />
+                <TransactionCard />
             </div>
             <DataLink text="featured themes" link="themes" placeholder="see all themes" />
             <Categories />
@@ -42,7 +42,7 @@ const Footer = styled.section`
     @media ${device.isSmallDevice} {
         flex-direction: column;
 
-        .news, .calculator {
+        .calculator {
             width: 100%;
         }
     }
