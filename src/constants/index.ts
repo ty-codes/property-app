@@ -1467,7 +1467,7 @@ export const themes = [
 		text: "This is the curated list of real estate stocks you can invest in"
 	},
 	{
-		background: "#FFDEF6;",
+		background: "#FFDEF6",
 		image: briefcase,
 		header: "charlie munger's top 20 stocks",
 		text: "This is the curated list of real estate stocks you can invest in"
