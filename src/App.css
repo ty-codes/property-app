@@ -404,3 +404,25 @@ h6 {
         width: 900px;
     }
 }
+
+.ReactModal__Content, .ReactModal__Content--after-open {
+    max-width: 100% !important;
+    inset: 0 !important;
+    display: block !important;
+    padding: 30px;
+    position: relative;
+
+}
+
+@media (min-width: 768px) {
+    .ReactModal__Content, .ReactModal__Content--after-open {
+        max-width: 90% !important;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 350px) {
+    .ReactModal__Content, .ReactModal__Content--after-open {
+        padding: 15px;
+    }
+}
