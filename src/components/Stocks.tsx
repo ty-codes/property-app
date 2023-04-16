@@ -56,8 +56,8 @@ export default function Stocks() {
     ]
     return (
         <Wrapper>
-            {placeholder?.map((stock, key) => (
-                <Stock>
+            {placeholder?.map((stock, id) => (
+                <Stock key={`stock-ra-${id}`}>
                     <img className="company-logo" src={stock.image} alt="company_logo" />
                     <h3 className="name">{stock.name}</h3>
                     <p className="company">{stock.company}</p>

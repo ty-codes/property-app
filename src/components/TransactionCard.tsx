@@ -1,5 +1,5 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { dangote, gtb, fbn, oando, googleIcon, graph } from "../assets";
+import { gtb, fbn, oando, googleIcon, graph } from "../assets";
 import styled from "styled-components";
 import { device } from "../constants";
 
@@ -13,44 +13,55 @@ export default function TransactionCard() {
 		"1-year": 4,
 	};
 
+	const setActiveTab = (id: string) => {
+		const tabs = Array.from(document.getElementsByClassName("tab") as HTMLCollectionOf<HTMLElement>);
+		tabs.forEach(el => {
+			el.style.backgroundColor = "transparent";
+			el.style.color = "#000";
+		})
+		var activeTab = document.getElementById(`tab:r1:${id}`) as HTMLElement;
+		activeTab.style.backgroundColor = "#1363ff";
+		activeTab.style.color = "#fff";
+	}
+
 	return (
 		// <div>
 		<TabWrapper
 			className="tabs"
 			defaultIndex={keys["today"] || 0}
-			onSelect={(index) => console.log(index, "tabs wrap")}
+			onSelect={(index) => {return;}}
 		>
 			<span>
-				<h3 style={{margin: "0"}}>Transactions</h3>
+				<h3 style={{ margin: "0" }}>Transactions</h3>
 				<a href="/">See All</a>
 			</span>
 			<TabList className="tab-list">
 
-				<Tab className="tab">
+				<Tab className="tab" onClick={() => setActiveTab("0")}>
 					<div>
 						<p>Today</p>
 					</div>
 				</Tab>
 
-				<Tab className="tab">
+				<Tab className="tab" onClick={() => setActiveTab("1")}>
 					<div>
 						<p>All Time</p>
 					</div>
 				</Tab>
 
-				<Tab className="tab">
+				<Tab className="tab" onClick={() => setActiveTab("2")}>
 					<div>
 						<p>1 Day</p>
 					</div>
 				</Tab>
 
-				<Tab className="tab">
+				<Tab className="tab" onClick={() => setActiveTab("3")}>
 					<div>
 						<p>1 Month</p>
 					</div>
 				</Tab>
 
-				<Tab className="tab">
+				<Tab className="tab" onClick={() => setActiveTab("4")}>
 					<div>
 						<p>1 Year</p>
 					</div>
@@ -88,39 +99,39 @@ export default function TransactionCard() {
 
 const Stocks = (): JSX.Element => {
 	const placeholder = [
-        {
-            image: googleIcon,
-            name: "access corp",
-            website: "dangote.com",
-            price: "2700",
-            company: "access holdings plc"
-        },
-        {
-            image: fbn,
-            name: "first bank",
-            website: "firstbankofnigeria.com",
-            price: "600",
-            company: "first bank holding company"
-        },
-        {
-            image: gtb,
-            name: "GTCO",
-            website: "gtbank.com",
-            price: "600",
-            company: "guaranty trust bank holding company"
-        },
-        {
-            image: oando,
-            name: "MTN",
-            website: "firstbankofnigeria.com",
-            price: "1200",
-            company: "MTN Nigeria PLC(MTNN)"
-        },
-    ]
+		{
+			image: googleIcon,
+			name: "access corp",
+			website: "dangote.com",
+			price: "2700",
+			company: "access holdings plc"
+		},
+		{
+			image: fbn,
+			name: "first bank",
+			website: "firstbankofnigeria.com",
+			price: "600",
+			company: "first bank holding company"
+		},
+		{
+			image: gtb,
+			name: "GTCO",
+			website: "gtbank.com",
+			price: "600",
+			company: "guaranty trust bank holding company"
+		},
+		{
+			image: oando,
+			name: "MTN",
+			website: "firstbankofnigeria.com",
+			price: "1200",
+			company: "MTN Nigeria PLC(MTNN)"
+		},
+	]
 	return (
 		<Wrapper>
-			{placeholder.slice(0, 4)?.map((stock) => (
-				<StockItem>
+			{placeholder.slice(0, 4)?.map((stock, id) => (
+				<StockItem key={`item-${id}`}>
 					<img className="logo" src={stock.image} alt="logo" />
 					<Name>
 						<p>{stock.name}</p>
@@ -140,28 +151,28 @@ const Stocks = (): JSX.Element => {
 
 const Stocks2 = (): JSX.Element => {
 	const placeholder = [
-        {
-            image: fbn,
-            name: "first bank",
-            website: "firstbankofnigeria.com",
-            price: "600",
-            company: "first bank holding company"
-        },
-        {
-            image: gtb,
-            name: "GTCO",
-            website: "gtbank.com",
-            price: "600",
-            company: "guaranty trust bank holding company"
-        },
-        {
-            image: oando,
-            name: "MTN",
-            website: "firstbankofnigeria.com",
-            price: "1200",
-            company: "MTN Nigeria PLC(MTNN)"
-        },
-    ]
+		{
+			image: fbn,
+			name: "first bank",
+			website: "firstbankofnigeria.com",
+			price: "600",
+			company: "first bank holding company"
+		},
+		{
+			image: gtb,
+			name: "GTCO",
+			website: "gtbank.com",
+			price: "600",
+			company: "guaranty trust bank holding company"
+		},
+		{
+			image: oando,
+			name: "MTN",
+			website: "firstbankofnigeria.com",
+			price: "1200",
+			company: "MTN Nigeria PLC(MTNN)"
+		},
+	]
 	return (
 		<Wrapper>
 			{placeholder.slice(0, 4)?.map((stock) => (
@@ -217,6 +228,10 @@ const Name = styled.div`
 	font-weight: 500;
 	text-overflow: ellipsis;
 	margin: 0 0.5em;
+
+	p {
+		font-weight: 600;
+	}
 `;
 
 const Graph = styled.img`
