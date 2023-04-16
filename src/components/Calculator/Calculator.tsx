@@ -28,8 +28,8 @@ export default function Calculator(): JSX.Element {
                 <input type="text" placeholder={`0`} />
 
                 <select placeholder={`Month`}>
-                    {months?.map((month, key) => (
-                        <option>{month}</option>
+                    {months?.map((month, id) => (
+                        <option key={`month-op-${id}`}>{month}</option>
                     ))}
                 </select>
 

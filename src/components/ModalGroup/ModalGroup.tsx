@@ -25,9 +25,9 @@ const ModalGroup = () => {
 
 
 	return (
-		<ModalWrapper>
+		<ModalWrapper id="modalwrap">
 			<Modal
-				// className="test-class"
+				className="wrap"
 				// onClose={() => setIsOpenModal(false)}
 				isOpen={isOpenModal}
 				// onRequestClose={closeModal}
@@ -49,7 +49,7 @@ const ModalGroup = () => {
 }
 
 const ModalWrapper = styled.div`
-
+	
 	.test-class {
 		position: fixed;
 		top: 0;
@@ -90,9 +90,9 @@ const Close = styled.a`
 	top: 20px;
 	right: 20px;
 
-    @media ${device.mobileL} {
-        top: 70px;
-    }
+    // @media ${device.mobileL} {
+    //     top: 70px;
+    // }
 
 	svg {
 		width: 15px;
