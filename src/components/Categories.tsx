@@ -8,8 +8,8 @@ export default function Categories() {
                 <p>Check out these categories to discover new stocks</p>
             </Header>
             <Wrapper>
-                {themes.slice(0, 7).map(category => (
-                    <Category style={{ backgroundColor: `${category.background}` }} >
+                {themes.slice(0, 7).map((category, id) => (
+                    <Category key={`category-ra-${id}`} style={{ backgroundColor: `${category.background}` }} >
                         <span>
                             <img src={category.image} alt="bank" />
                         </span>
@@ -54,7 +54,7 @@ height: 280px;
     border: none;
 
     img {
-        width: 80%;
+        width: 85%;
         height: 180px;
     }
 
