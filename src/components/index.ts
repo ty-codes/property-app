@@ -29,7 +29,7 @@ import StockOfTheMonth from "./StockOfTheMonth";
 import Stocks from "./Stocks";
 import Stock from "./Stock/Stock";
 import ModalGroup from "./ModalGroup/ModalGroup";
-import ListStock from "./ListStock/ListStock";
+import ListStock from "./ListStock";
 import ListStockCategory from "./ListStockCategory/ListStockCategory";
 import ListStockDescription from "./ListStockDescription/ListStockDescription";
 import ListStockDocuments from "./ListStockDocuments/ListStockDocuments";
