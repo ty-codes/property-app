@@ -1,23 +1,9 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { dangote, gtb, fbn, oando, googleIcon, graph } from "../assets";
+import { gtb, fbn, oando, googleIcon, graph } from "../assets";
 import styled from "styled-components";
 import { device } from "../constants";
 
 export default function PerformanceCard() {
-
-	const tabs = {
-		0: "edit-profile",
-		1: "social-media",
-		2: "insights",
-	};
-
-	const subTabs = {
-		0: "edit-profile",
-		1: "pocket",
-		2: "change-password",
-		3: "delete-account"
-	};
-
 	const keys = {
 		"today": 0,
 		"all-time": 1,
@@ -26,19 +12,22 @@ export default function PerformanceCard() {
 		"1-year": 4,
 	};
 
-	const subKeys = {
-		"edit-profile": 0,
-		"pocket": 1,
-		"change-password": 2,
-		"delete-account": 3
-	};
+	const setActiveTab = (id: string) => {
+		const tabs = Array.from(document.getElementsByClassName("tab") as HTMLCollectionOf<HTMLElement>);
+		tabs.forEach(el => {
+			el.style.backgroundColor = "transparent";
+			el.style.color = "#000";
+		})
+		var activeTab = document.getElementById(`tab:r0:${id}`) as HTMLElement;
+		activeTab.style.backgroundColor = "#1363ff";
+		activeTab.style.color = "#fff";
+	}
 
 	return (
-		// <div>
 		<TabWrapper
 			className="tabs"
 			defaultIndex={keys["today"] || 0}
-			onSelect={(index) => console.log(index, "tabs wrap")}
+			onSelect={(index) => {return;}}
 		>
 			<span>
 				<h3 style={{margin: "0"}}>Performance</h3>
@@ -46,31 +35,31 @@ export default function PerformanceCard() {
 			</span>
 			<TabList className="tab-list">
 
-				<Tab className="tab">
+				<Tab className="tab" onClick={() => setActiveTab("0")}>
 					<div>
 						<p>Today</p>
 					</div>
 				</Tab>
 
-				<Tab className="tab">
+				<Tab className="tab" onClick={() => setActiveTab("1")}>
 					<div>
 						<p>All Time</p>
 					</div>
 				</Tab>
 
-				<Tab className="tab">
+				<Tab className="tab" onClick={() => setActiveTab("2")}>
 					<div>
 						<p>1 Day</p>
 					</div>
 				</Tab>
 
-				<Tab className="tab">
+				<Tab className="tab" onClick={() => setActiveTab("3")}>
 					<div>
 						<p>1 Month</p>
 					</div>
 				</Tab>
 
-				<Tab className="tab">
+				<Tab className="tab" onClick={() => setActiveTab("4")}>
 					<div>
 						<p>1 Year</p>
 					</div>
@@ -102,7 +91,6 @@ export default function PerformanceCard() {
 				<Stocks />
 			</TabPanel>
 		</TabWrapper>
-		// </div>
 	)
 };
 
@@ -139,8 +127,8 @@ const Stocks = (): JSX.Element => {
     ]
 	return (
 		<Wrapper>
-			{placeholder.slice(0, 4)?.map((stock) => (
-				<StockItem>
+			{placeholder.slice(0, 4)?.map((stock, id) => (
+				<StockItem key={`item-${id}`}>
 					<img className="logo" src={stock.image} alt="logo" />
 					<Name>
 						<p>{stock.name}</p>
@@ -181,6 +169,7 @@ const Stocks2 = (): JSX.Element => {
             company: "MTN Nigeria PLC(MTNN)"
         },
     ]
+
 	return (
 		<Wrapper>
 			{placeholder.slice(0, 4)?.map((stock) => (
@@ -236,6 +225,10 @@ const Name = styled.div`
 	font-weight: 500;
 	text-overflow: ellipsis;
 	margin: 0 0.5em;
+
+	p {
+		font-weight: 600;
+	}
 `;
 
 const Graph = styled.img`
@@ -256,7 +249,7 @@ const Price = styled.div`
 		font-size: 1em;
 		color: green;
 	}
-`
+`;
 
 const TabWrapper = styled(Tabs)`
 	flex-grow: 1;
@@ -285,7 +278,7 @@ const TabWrapper = styled(Tabs)`
 		}
 
 		h3 {
-			font-weight: 600;
+			font-weight: 400;
 			font-size: 14px;
 		}
 	}
@@ -322,9 +315,11 @@ const TabWrapper = styled(Tabs)`
 		width: 12em;
 		padding: 12px 0;
 		margin-right: 0.8px;
+		border-radius: 5px;
+
 
 		p {
 			margin: 0
 		}
 	}
-`
+`;
