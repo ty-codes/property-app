@@ -222,11 +222,13 @@ const StockItem = styled.div`
 const Name = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 150px;
+	width: 90px;
 	align-items: start;
 	font-size: 13px;
 	font-weight: 500;
 	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 	margin: 0 0.5em;
 
 	p {
@@ -235,7 +237,7 @@ const Name = styled.div`
 `;
 
 const Graph = styled.img`
-	width: 80px;
+	width: 50px;
 	height: 40px;
 `;
 
@@ -245,11 +247,12 @@ const Price = styled.div`
 
 	.price {
 		color: #000;
-		font-size: 1em;
+		font-size: 0.9em;
+		font-weight: 600;
 	}
 
 	.percent {
-		font-size: 1em;
+		font-size: 0.9em;
 		color: green;
 	}
 `
