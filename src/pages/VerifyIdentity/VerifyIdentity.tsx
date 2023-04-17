@@ -8,7 +8,7 @@ export default function VerifyIdentity(): JSX.Element {
     
 
   const [step, setStep] = useState<number>(0);
-  const [documentType, setDocumentType] = useState("");
+  const [, setDocumentType] = useState("");
 
   function renderPage() {
 		switch (step) {
