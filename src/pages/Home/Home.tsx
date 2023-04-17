@@ -38,12 +38,9 @@ const Footer = styled.section`
     display: flex; 
     justify-content: space-between;
     gap: 20px;
+    padding-bottom: 2em;
 
     @media ${device.isSmallDevice} {
         flex-direction: column;
-
-        .calculator {
-            width: 100%;
-        }
     }
 `
