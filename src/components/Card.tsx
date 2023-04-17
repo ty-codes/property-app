@@ -32,20 +32,20 @@ export default function Card() {
                     backgroundColor: currency==="euro" ? "white" : "transparent",
                     color: currency==="euro" ? "#1363ff" : "#fff"
                 }}
-                onClick={() => setCurrency("euro")}>Euro E</span>
+                onClick={() => setCurrency("euro")}>Euro &#8364;</span>
             </Currencies>
 
             <Details>
                 <div>
                     <h3>Net Worth</h3>
-                    <h2>{currency === "naira" ? "N" : currency === "euro" ? "E" : currency === "dollars" ? "$" : "N"}</h2>
+                    <h2>{currency === "naira" ? "\u20A6" : currency === "euro" ? "\u20Ac" : currency === "dollars" ? "$" : "\u20A6"}</h2>
                     <h2>1, 000, 000</h2>
                     <div className="outlined">Deposit <PlusOutlined /> </div>
                 </div>
 
                 <div>
                     <h3>Cash Balance</h3>
-                    <h2>{currency === "naira" ? "N" : currency === "euro" ? "E" : currency === "dollars" ? "$" : "N"}</h2>
+                    <h2>{currency === "naira" ? "\u20A6" : currency === "euro" ? "\u20Ac" : currency === "dollars" ? "$" : "\u20A6"}</h2>
                     <h2>500, 000</h2>
                     <div className="filled">Invest <StatDownIcon /> </div>
                 </div>
