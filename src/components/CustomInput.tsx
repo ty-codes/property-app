@@ -61,10 +61,15 @@ const CustomInput = (props: ICustomInput): JSX.Element => {
 			<Wrapper>
 				<select {...others}>
 					{/* <option value="" label={others["placeholder"]} /> */}
+					<option value="" selected>{props?.defaultValue}</option>
+
 					{
 						others?.options &&
 						others?.options.map(option => (
-							<option value={option}>{option}</option>
+							<>
+								<option value={option}>{option}</option>
+
+							</>
 						))
 					}
 				</select>
@@ -123,6 +128,7 @@ interface ICustomInput {
 	style?: {},
 	options?: string[],
 	rightText?: JSX.Element | undefined,
+	defaultValue?: string
 }
 
 const Wrapper = styled.div`
