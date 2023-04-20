@@ -43,7 +43,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    
+    align-items: center;
 `;
 
 const Company = styled.div`
