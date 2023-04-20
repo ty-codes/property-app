@@ -12,7 +12,8 @@
     background-repeat: repeat;
     display: flex;
     flex-direction: column;
-   justify-content: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .themes-header h1 {
@@ -23,6 +24,7 @@
     text-transform: capitalize;
     color: #FFFFFF;
 }
+
 .themes-header p {
     font-weight: lighter;
     font-size: 24px;
@@ -31,6 +33,7 @@
     text-transform: capitalize;
     color: #FFFFFF;
 }
+
 .theme {
     height: 250px;
     width: 200px;
@@ -80,9 +83,65 @@
     padding: 1em;
 }
 
+@media (max-width: 900px) {
+    .themes-header h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .themes-header p {
+        font-size: 17px;
+    }
+}
+
 @media (max-width: 850px) {
 
     .theme {
         width: 220px;
+    }
+}
+
+@media (max-width: 675px) {
+    .theme {
+        width: 48%;
+    }
+
+    .themes {
+        margin: 0 2em;
+    }
+}
+
+@media (max-width: 520px) {
+    .themes-header h1 {
+        font-size: 30px;
+    }
+
+    .themes-header {
+        height: 210px;
+    }
+
+    .themes {
+        margin: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .themes-header p {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .theme {
+        width: 80%;
+    }
+
+    .themes {
+        justify-content: center;
+    }
+
+    .theme img {
+        width: 150px;
     }
 }
