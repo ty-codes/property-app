@@ -118,7 +118,8 @@ const Wrapper = styled.div<IWrapper>`
             width: 90%;
             align-self: center;
             border-radius: 10px;
-            margin-bottom: 1em;
+            position: absolute;
+            bottom: 10px;
         }
 
         button {
