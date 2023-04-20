@@ -138,6 +138,13 @@
     }
 }
 
+@media (max-width: 520px) {
+  #home {
+    display: none;
+  }
+   
+}
+
 @media (max-width: 420px) {
     #home .heading {
         /* font-size: 29px; */
@@ -164,12 +171,3 @@
         font-size: 0.6em;
     }
 }
-
-/* mobile design */
-@media (max-width: 520px) {
-    
-    #home {
-        padding: 25px;
-    }
-}
-
