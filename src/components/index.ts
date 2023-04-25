@@ -4,7 +4,7 @@ import PhotoInstructions from "./PhotoInstructions";
 import UploadImage from "./UploadImage";
 import SuccessMessage from "./SuccessMessage";
 import Building from "./Building";
-import PreApp from "./PreApp/PreApp";
+import PreApp from "./PreApp";
 import Loading from "./Loading";
 import CustomInput from "./CustomInput";
 import DateOfBirth from "./DetailsSteps/DateOfBirth";
@@ -40,6 +40,10 @@ import News from "./News";
 import Calculator from "./Calculator";
 import PerformanceCard from "./PerformanceCard";
 import TransactionCard from "./TransactionCard";
+import PropertyImages from "./PropertyImages";
+import PropertyDescription from "./PropertyDescription";
+import PropertyDetails from "./PropertyDetails";
+
 
 export {
     IdVerification,
@@ -83,5 +87,8 @@ export {
     Calculator,
     News,
     PerformanceCard,
-    TransactionCard
+    TransactionCard,
+    PropertyImages,
+    PropertyDescription,
+    PropertyDetails
 }

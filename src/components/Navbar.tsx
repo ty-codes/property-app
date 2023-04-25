@@ -58,7 +58,7 @@ export default function NavBar() {
 const Wrapper = styled(Navbar)`
     height: 80px;
     display: flex;
-    padding: 0;
+    padding: 0 5px;
     justify-content: space-between;
     // position: fixed;
     // top: 0;
