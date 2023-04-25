@@ -276,7 +276,7 @@ const TabWrapper = styled(Tabs)`
 			line-height: 15px;
 			text-align: center;
 			text-transform: capitalize;
-			color: #979797;
+			color: ${props => props.theme.fade};
 			cursor: pointer;
 		}
 
