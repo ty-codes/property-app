@@ -23,6 +23,7 @@ const Onboarding = React.lazy(() => import('./pages/Onboarding/Onboarding'))
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const Themes = React.lazy(() => import('./pages/Themes/Themes'));
 const Theme = React.lazy(() => import('./pages/Theme/Theme'));
+const Property = React.lazy(() => import('./pages/Property/Property'));
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -219,6 +220,7 @@ export default function App(): JSX.Element {
         background: "#fff",
         primaryColor: "#1363ff",
         secondaryColor: "#c5d8ff",
+        fade: "#979797",
 
         // variables
         value: "10px",
@@ -264,6 +266,7 @@ export default function App(): JSX.Element {
                     <Route index element={<Home />} />
                     <Route path='themes' element={<Themes />} />
                     <Route path='theme/:id' element={<Theme />} />
+                    <Route path='property/:id' element={<Property />} />
                   </Route>
                   <Route path='verification'>
                     <Route index element={<VerifyIdentity />} />
