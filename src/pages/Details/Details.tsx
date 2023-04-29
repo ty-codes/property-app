@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { Stepper, Step, StepLabel } from '@mui/material';
-import PreApp from '../../components/PreApp/PreApp';
 import './Details.css';
 import Modal from 'react-modal';
 import { partyhatIcon } from '../../assets';
 import { useUserContext } from '../../contexts/UserContext';
 import { UserContextType } from '../../@types/user';
-import { Name, Gender, DateOfBirth, Password, Avatar } from "../../components"
+import { Name, Gender, DateOfBirth, Password, Avatar, PreApp } from "../../components"
 import { Logo } from "../../assets/svg";
 
 
