@@ -9,7 +9,7 @@ const CustomInput = (props: ICustomInput): JSX.Element => {
 	if (type === "email") {
 		return (
 			<Wrapper>
-				{others?.lefticon}
+				<span className="left">{others?.lefticon}</span>
 				<input type={type} {...others} />
 			</Wrapper>
 		)
@@ -17,7 +17,7 @@ const CustomInput = (props: ICustomInput): JSX.Element => {
 	if (type === "tel") {
 		return (
 			<Wrapper style={{ justifyContent: "space-around" }}>
-				{others?.lefticon}
+				<span className="left">{others?.lefticon}</span>
 				<input type={type} {...others} />
 			</Wrapper>
 		)
@@ -27,7 +27,7 @@ const CustomInput = (props: ICustomInput): JSX.Element => {
 	if (type === "password") {
 		return (
 			<Wrapper className={others?.className}>
-				{others?.lefticon}
+				<span className="left">{others?.lefticon}</span>
 				<input type={see ? "text" : "password"} {...others} />
 				{see ? (
 					<EyeOutlined
@@ -95,9 +95,9 @@ const CustomInput = (props: ICustomInput): JSX.Element => {
 
 	return (
 		<Wrapper >
-			{others?.lefticon}
+			<span className="left">{others?.lefticon}</span>
 			<input type="text" {...others} />
-			{others?.rightText}
+			<span className="right">{others?.rightText}</span>
 		</Wrapper>
 	);
 
@@ -157,9 +157,16 @@ const Wrapper = styled.div`
 
 
     svg {
-            margin: 0 10px;
+            // margin: 0 10px;
         }
-
+	.left {
+		position: absolute;
+		left: 5px;
+	}
+	.right {
+		position: absolute;
+		right: 5px;
+	}
 	input[type="text"],
 	input[type="email"],
 	input[type="password"],
@@ -175,7 +182,7 @@ const Wrapper = styled.div`
 		letter-spacing: 1px;
 		color: grey;
         height: 51px;
-		padding: 0 1em;
+		// padding: 0 1em;
 		background-color: rgba(0, 87, 255, 0.02);
 	}
 
@@ -207,7 +214,6 @@ const Wrapper = styled.div`
 	.right-text {
 		color: #ccc;
 		font-size: 0.6em;
-		padding: 1em;
 		font-weight: 600;
 	}
 

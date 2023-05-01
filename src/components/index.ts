@@ -7,17 +7,20 @@ import Building from "./Building";
 import PreApp from "./PreApp";
 import Loading from "./Loading";
 import CustomInput from "./CustomInput";
+
 import DateOfBirth from "./DetailsSteps/DateOfBirth";
 import Name from "./DetailsSteps/Name";
 import Gender from "./DetailsSteps/Gender";
 import Password from "./DetailsSteps/Password";
 import Avatar from "./DetailsSteps/Avatar";
 import Address from "./Onboarding/Address";
+
 import EmploymentStatus from "./Onboarding/EmploymentStatus";
 import FinancialStatus from "./Onboarding/FinancialStatus";
 import InvestmentStatus from "./Onboarding/InvestmentStatus";
 import MaritalStatus from "./Onboarding/MaritalStatus";
 import Nationality from "./Onboarding/Nationality";
+
 import NavBar from "./Navbar";
 import Logo from "./Logo";
 import Categories from "./Categories";
@@ -29,6 +32,7 @@ import StockOfTheMonth from "./StockOfTheMonth";
 import Stocks from "./Stocks";
 import Stock from "./Stock";
 import ModalGroup from "./ModalGroup";
+
 import ListStock from "./ListStock";
 import ListStockCategory from "./ListStockCategory";
 import ListStockDescription from "./ListStockDescription";
@@ -36,14 +40,20 @@ import ListStockDocuments from "./ListStockDocuments";
 import ListStockImages from "./ListStockImages";
 import ListStockDetails from "./ListStockDetails";
 import ListStockReview from "./ListStockReview";
+
 import News from "./News";
 import Calculator from "./Calculator";
 import PerformanceCard from "./PerformanceCard";
 import TransactionCard from "./TransactionCard";
-import PropertyImages from "./PropertyImages";
-import PropertyDescription from "./PropertyDescription";
-import PropertyDetails from "./PropertyDetails";
 
+import PropertyImages from "./Property/PropertyImages";
+import PropertyDescription from "./Property/PropertyDescription";
+import PropertyDetails from "./Property/PropertyDetails";
+import FundsInformation from "./Property/FundsInformation";
+import ClosingDocuments from "./Property/ClosingDocuments";
+import Stats from "./Property/Stats";
+import Summary from "./Property/Summary";
+import SimilarProjects from "./Property/SimilarProjects";
 
 export {
     IdVerification,
@@ -90,5 +100,10 @@ export {
     TransactionCard,
     PropertyImages,
     PropertyDescription,
-    PropertyDetails
+    PropertyDetails,
+    FundsInformation,
+    ClosingDocuments,
+    Stats,
+    Summary,
+    SimilarProjects
 }

@@ -125,17 +125,11 @@ const Wrapper = styled.div`
             margin: 0;
             width: 11em;
         }
-
-        span {
-            margin: 1em;
-            width: 5em;
-        }
     }
              
     .other-details {
         display: flex;
         justify-content: space-between;
-        border: 1px solid #ddd;
         padding: 20px;
         flex-wrap: wrap;
         border-radius: 5px;
@@ -148,5 +142,11 @@ const Wrapper = styled.div`
         div {
             margin: 1em 0;
         }
+    }
+
+    h5 {
+        font-size: 14px;
+        font-weight: 600;
+        color: ${props => props.theme.black};
     }
 `;
