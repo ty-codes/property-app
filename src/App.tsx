@@ -210,7 +210,7 @@ export default function App(): JSX.Element {
   const theme = useMemo(
     () => ({
         // colors
-        black: "#000000",
+        black: "#464646",
         white: "#FFFFFF",
         grey: "#263238",
         red: "#D32600",

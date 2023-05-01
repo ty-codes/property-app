@@ -3,6 +3,18 @@
     src: url(./fonts/metropolis.regular.woff);
 }
 
+:root {
+    --black: "#464646";
+    --white: "#FFFFFF";
+    --grey: "#263238";
+    --red: "#D32600";
+    --text: "#FFFFFF";
+    --background: "#fff";
+    --primaryColor: "#1363ff";
+    --secondaryColor: "#c5d8ff";
+    --fade: "#979797";
+}
+
 .body {
     margin: 0;
     padding: 0;
@@ -10,14 +22,41 @@
 
 /* font types */
 
-h2 {
+h1 {
     font-size: 30px;
 }
 
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    color: var(--black);
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-top: 1em;
+    text-align: left;
+    margin-bottom: 1em;
+    text-transform: capitalize;
+}
+
+h3 svg {
+    color: var(--primaryColor);
+    margin: 0.3em;
+    margin-bottom: 0.5em;
+}
 
 h6 {
     font-size: 0.75em;
     text-decoration: none
+}
+
+p {
+    font-size: 14px;
+}
+
+.primaryColor {
+    color: var(--primaryColor);
 }
 
 
@@ -25,19 +64,21 @@ h6 {
 ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
+    display: none;
 }
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
     background-color: #ddd;
     border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #1363FF;
-}
+} */
 
 .outlet {
-    padding-inline: 8px;
+    padding-inline: 20px;
+    overflow-x: hidden;
 }
 
 /* .outlet ::-webkit-scrollbar {
