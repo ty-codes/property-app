@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import { PropertyImages, PropertyDescription, PropertyDetails } from "../../components";
+import { PropertyImages, FundsInformation, PropertyDescription, PropertyDetails, ClosingDocuments, Stats, Summary, SimilarProjects } from "../../components";
 
 
 export default function Property() {
@@ -10,12 +10,17 @@ export default function Property() {
             <Wrapper>
                 <section>
                     <PropertyImages />
+                    <Stats />
+                    <FundsInformation />
                 </section>
                 <section>
                 <PropertyDescription />
                 <PropertyDetails />
+                <Summary />
+                <ClosingDocuments />
                 </section>
             </Wrapper>
+            <SimilarProjects />
         </div>
 
     )
@@ -23,13 +28,22 @@ export default function Property() {
 
 const Wrapper = styled.div`
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: fit-content;
     justify-content: space-between;
     margin-top: 2em;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
     
     section {
-        width: 48%;
+        width: 49%;
         height: 100%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 `
