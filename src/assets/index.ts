@@ -20,6 +20,16 @@ import dangote from "./dangote.png";
 import gtb from "./gtb.png";
 import fbn from "./fbn.png";
 import oando from "./oando.png";
+import Placeholder1 from "./pc_image1.png";
+import Placeholder2 from "./pc_image2.png";
+import Placeholder3 from "./pc_image3.png";
+import obve1 from "./obve.png";
+import obve2 from "./obve2.png";
+import obve3 from "./obve3.png";
+import obve4 from "./obve4.png";
+import obve5 from "./obve5.png";
+import obve6 from "./obve6.png";
+
 
 export {
     building,
@@ -43,5 +53,14 @@ export {
     dangote,
     gtb,
     fbn,
-    oando
+    oando,
+    Placeholder1,
+    Placeholder2,
+    Placeholder3,
+    obve1,
+    obve2,
+    obve3,
+    obve4,
+    obve5,
+    obve6
 }
