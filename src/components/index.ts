@@ -33,13 +33,13 @@ import Stocks from "./Stocks";
 import Stock from "./Stock";
 import ModalGroup from "./ModalGroup";
 
-import ListStock from "./ListStock";
-import ListStockCategory from "./ListStockCategory";
-import ListStockDescription from "./ListStockDescription";
-import ListStockDocuments from "./ListStockDocuments";
-import ListStockImages from "./ListStockImages";
-import ListStockDetails from "./ListStockDetails";
-import ListStockReview from "./ListStockReview";
+import ListStock from "./ListStock/ListStock";
+import ListStockCategory from "./ListStock/ListStockCategory";
+import ListStockDescription from "./ListStock/ListStockDescription";
+import ListStockDocuments from "./ListStock/ListStockDocuments";
+import ListStockImages from "./ListStock/ListStockImages";
+import ListStockDetails from "./ListStock/ListStockDetails";
+import ListStockReview from "./ListStock/ListStockReview";
 
 import News from "./News";
 import Calculator from "./Calculator";
@@ -54,6 +54,11 @@ import ClosingDocuments from "./Property/ClosingDocuments";
 import Stats from "./Property/Stats";
 import Summary from "./Property/Summary";
 import SimilarProjects from "./Property/SimilarProjects";
+import Graphs from "./Property/Graphs";
+import Reviews from "./Property/Reviews";
+import Sponsors from "./Property/Sponsors";
+
+
 
 export {
     IdVerification,
@@ -105,5 +110,8 @@ export {
     ClosingDocuments,
     Stats,
     Summary,
-    SimilarProjects
+    SimilarProjects,
+    Graphs,
+    Sponsors,
+    Reviews
 }

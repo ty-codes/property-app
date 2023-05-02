@@ -9,7 +9,7 @@ const CustomInput = (props: ICustomInput): JSX.Element => {
 	if (type === "email") {
 		return (
 			<Wrapper>
-				<span className="left">{others?.lefticon}</span>
+				{others?.lefticon && <span className="left">{others?.lefticon}</span>}
 				<input type={type} {...others} />
 			</Wrapper>
 		)
@@ -17,7 +17,7 @@ const CustomInput = (props: ICustomInput): JSX.Element => {
 	if (type === "tel") {
 		return (
 			<Wrapper style={{ justifyContent: "space-around" }}>
-				<span className="left">{others?.lefticon}</span>
+				{others?.lefticon && <span className="left">{others?.lefticon}</span>}
 				<input type={type} {...others} />
 			</Wrapper>
 		)
@@ -27,7 +27,7 @@ const CustomInput = (props: ICustomInput): JSX.Element => {
 	if (type === "password") {
 		return (
 			<Wrapper className={others?.className}>
-				<span className="left">{others?.lefticon}</span>
+				{others?.lefticon && <span className="left">{others?.lefticon}</span>}
 				<input type={see ? "text" : "password"} {...others} />
 				{see ? (
 					<EyeOutlined
@@ -95,9 +95,9 @@ const CustomInput = (props: ICustomInput): JSX.Element => {
 
 	return (
 		<Wrapper >
-			<span className="left">{others?.lefticon}</span>
+			{others?.lefticon && <span className="left">{others?.lefticon}</span>}
 			<input type="text" {...others} />
-			<span className="right">{others?.rightText}</span>
+			{others?.rightText && <span className="right">{others?.rightText}</span>}
 		</Wrapper>
 	);
 
@@ -146,7 +146,6 @@ const Wrapper = styled.div`
 	background: white;
     margin: auto;
 	margin-bottom: ${(props: any) => (props.error && props.touched ? 25 : 20)}px;
-    // width: 20em;
 	max-width: 20em;
     border: 1px solid #C5D8FF;
 
@@ -161,11 +160,23 @@ const Wrapper = styled.div`
         }
 	.left {
 		position: absolute;
-		left: 5px;
+		left: 0px;
+		background-color: white;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0 5px;
+		border-radius: 9.5|px;
 	}
 	.right {
 		position: absolute;
-		right: 5px;
+		right: 0px;
+		background-color: white;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0 5px;
+		border-radius: 9.5px;
 	}
 	input[type="text"],
 	input[type="email"],
@@ -174,6 +185,7 @@ const Wrapper = styled.div`
 	input[type="date"] {
 		border: none;
 		outline: none;
+		width: 100%;
 		font-style: normal;
 		font-weight: 700;
 		font-size: 0.9em;
@@ -182,7 +194,7 @@ const Wrapper = styled.div`
 		letter-spacing: 1px;
 		color: grey;
         height: 51px;
-		// padding: 0 1em;
+		padding-left: 1.8em;
 		background-color: rgba(0, 87, 255, 0.02);
 	}
 
@@ -261,7 +273,7 @@ const Wrapper = styled.div`
 		letter-spacing: 1px;
 		color: grey;
 		text-transformm: capitalize;
-		z-index: 1;
+		// z-index: 1;
 		outline: none;
 		height: 51px;
 	}
