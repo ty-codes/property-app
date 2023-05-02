@@ -1,5 +1,10 @@
 import styled from "styled-components"
-import { obve1, obve2, obve3, obve4, obve5, obve6 } from "../../assets";
+import { 
+    obve1, obve2, obve3,
+     obve4, obve5, obve6
+} from "../../assets";
+import { device } from "../../constants";
+
 
 interface Props {
     bg?: string
@@ -68,6 +73,7 @@ const Wrapper = styled.div`
     h2 {
         text-transform: capitalize;
         font-weight: 700;
+        margin: 2em 0 1em 0;
     }
 `
 
@@ -78,6 +84,16 @@ const Projects = styled.div`
 `;
 
 const Project = styled.div`
+    width: 32%;
+
+    @media (max-width: 940px){
+        width: 49%;
+    }
+
+    @media (max-width: 645px){
+        width: 100%;
+    }
+
    .text {
     display: flex;
     justify-content: space-between;
@@ -96,20 +112,27 @@ const Column = styled.span`
 
 const Image = styled.span<Props>`
     position: relative;
+    height: 300px;
+    width: 100%;
     
     & > span {
         background-image: url(${props => props.bg});
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
         display: flex;
         justify-content: center;
-        padding: 1em;
         height: 300px;
-        width: 300px;
+        width: 100%;
+        min-width: 300px;
+
+        @media ${device.mobileM} {
+            min-width: auto;
+        };
     }
 
     & > div {
-        padding: 0 10px;
+        padding: 0 0 8px 8px;
         position: absolute;
         width: 100%;
         bottom: 0;
