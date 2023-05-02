@@ -7,7 +7,7 @@ import {
     SimilarProjects, Graphs, Reviews,
     Sponsors,
 } from "../../components";
-
+import {device} from "../../constants";
 
 export default function Property() {
     const { slug } = useParams();
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
     margin-top: 2em;
     gap: 20px;
 
-    @media (max-width: 768px) {
+    @media ${device.isSmallDevice} {
         flex-direction: column-reverse;
     }
     
@@ -51,7 +51,7 @@ const Wrapper = styled.div`
         width: 49%;
         height: 100%;
 
-        @media (max-width: 768px) {
+        @media ${device.isSmallDevice} {
             width: 100%;
         }
     }
