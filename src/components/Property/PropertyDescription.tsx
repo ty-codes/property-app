@@ -70,7 +70,7 @@ const Description = styled.p`
     text-align: justify;
     font-weight: lighter;
     font-size: 14px;
-    width: 93%;
+    width: 100%;
     word-spacing: 5px;
     color: ${props => props.theme.fade};
     line-height: 1.7rem;

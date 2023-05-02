@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react";
+import { device } from "../../constants";
+import { StarFilled } from "@ant-design/icons";
+import { obve1 } from "../../assets";
 
 export default function Reviews(): JSX.Element {
      const [textLength, setTextLength] = useState<number>(0);
@@ -25,27 +28,65 @@ export default function Reviews(): JSX.Element {
                     <button className="button filled_btn">Leave review</button>
                </ReviewInput>
                <ReviewsWrapper>
-                    {Array(5).map((review) => 
-                         <p>hey</p>
-                    )}
+                    <Header>
+                         <div>
+                              <h5 className="primaryColor">Reviews</h5>
+                              <h5 className="primaryColor">3.0</h5>
+                         </div>
+
+                         <div></div>
+                    </Header>
                     <Review>
-                         <Header>
+
+                         <div className="details">
+                              <Avatar src={obve1} alt="avatar" />
                               <div>
-                                   <h5 className="primaryColor">Reviews</h5>
-                                   <h5 className="primaryColor">3.0</h5>
+                                   <Name>{placeholder?.name}</Name>
+                                   <Date>{placeholder?.date}</Date>
+                                   <><StarFilled /><StarFilled /><StarFilled /><StarFilled /><StarFilled /></>
                               </div>
 
-                              <div>group of pics</div>
-                         </Header>
-                         <div className="details">
-                              <Avatar />
-                              <div>
-                                   <Name></Name>
-                                   <Date></Date>
-                                   <>stars</>
-                              </div>
-                              <p></p>
                          </div>
+                         <p>{placeholder?.review}</p>
+                    </Review>
+                    <Review>
+
+                         <div className="details">
+                              <Avatar src={obve1} alt="avatar" />
+                              <div>
+                                   <Name>{placeholder?.name}</Name>
+                                   <Date>{placeholder?.date}</Date>
+                                   <><StarFilled /><StarFilled /><StarFilled /><StarFilled /><StarFilled /></>
+                              </div>
+
+                         </div>
+                         <p>{placeholder?.review}</p>
+                    </Review>
+                    <Review>
+
+                         <div className="details">
+                              <Avatar src={obve1} alt="avatar" />
+                              <div>
+                                   <Name>{placeholder?.name}</Name>
+                                   <Date>{placeholder?.date}</Date>
+                                   <><StarFilled /><StarFilled /><StarFilled /><StarFilled /><StarFilled /></>
+                              </div>
+
+                         </div>
+                         <p>{placeholder?.review}</p>
+                    </Review>
+                    <Review>
+
+                         <div className="details">
+                              <Avatar src={obve1} alt="avatar" />
+                              <div>
+                                   <Name>{placeholder?.name}</Name>
+                                   <Date>{placeholder?.date}</Date>
+                                   <><StarFilled /><StarFilled /><StarFilled /><StarFilled /><StarFilled /></>
+                              </div>
+
+                         </div>
+                         <p>{placeholder?.review}</p>
                     </Review>
                </ReviewsWrapper>
           </Wrapper>
@@ -56,6 +97,10 @@ const Wrapper = styled.div`
      display: flex;
      justify-content: space-between;
      width: 100%;
+
+     @media ${device.isSmallDevice} {
+          flex-direction: column;
+     }
 `
 
 const ReviewInput = styled.div`
@@ -88,22 +133,60 @@ const ReviewInput = styled.div`
 
      }
 
+     @media ${device.isSmallDevice} {
+          width: 100%;
+     }
+
 `;
 
 const ReviewsWrapper = styled.div`
      width: 49%;
+     height: 350px;
+     overflow: hidden auto;
+
+     @media ${device.isSmallDevice} {
+          width: 100%;
+     }
 `;
 
 const Review = styled.div`
+     p {
+          text-align: left;
+          text-align: justify;
+          font-weight: lighter;
+          font-size: 12px;
+          width: 100%;
+          color: ${props => props.theme.fade};
+          line-height: 1.7rem;
+          margin: 0;
+     }
 
+     .details {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+
+          svg {
+               color: gold;
+          }
+          
+     }
 `;
 
 const Header = styled.div`
      display: flex;
+     justify-content: space-between;
+
+     h5 {
+          font-size: 15px;
+          font-weight: 700;
+     }
 `;
 
 const Name = styled.p`
-
+     font-size: 13px;
+     color: ${props => props.theme.primaryColor};
+     font-weight: 600;
 `;
 
 const Date = styled.p`
@@ -111,5 +194,8 @@ const Date = styled.p`
 `;
 
 const Avatar = styled.img`
-
-`
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     object-fit: cover;
+`;

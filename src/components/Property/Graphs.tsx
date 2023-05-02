@@ -1,7 +1,6 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { gtb, fbn, oando, googleIcon, graph } from "../../assets";
+import { graph } from "../../assets";
 import styled from "styled-components";
-import { device } from "../../constants";
 
 export default function Graphs(): JSX.Element {
     const keys = {
