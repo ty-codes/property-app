@@ -1,6 +1,12 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import { PropertyImages, FundsInformation, PropertyDescription, PropertyDetails, ClosingDocuments, Stats, Summary, SimilarProjects } from "../../components";
+import { 
+    PropertyImages, FundsInformation, 
+    PropertyDescription, PropertyDetails, 
+    ClosingDocuments, Stats, Summary, 
+    SimilarProjects, Graphs, Reviews,
+    Sponsors,
+} from "../../components";
 
 
 export default function Property() {
@@ -10,8 +16,10 @@ export default function Property() {
             <Wrapper>
                 <section>
                     <PropertyImages />
+                    <Graphs />
                     <Stats />
                     <FundsInformation />
+                    <Sponsors />
                 </section>
                 <section>
                 <PropertyDescription />
@@ -20,6 +28,7 @@ export default function Property() {
                 <ClosingDocuments />
                 </section>
             </Wrapper>
+            <Reviews />
             <SimilarProjects />
         </div>
 
@@ -35,7 +44,7 @@ const Wrapper = styled.div`
     gap: 20px;
 
     @media (max-width: 768px) {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     
     section {
