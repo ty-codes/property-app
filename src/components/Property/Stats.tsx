@@ -79,7 +79,8 @@ const Status = styled.ul`
             margin: 0;
             text-transform: uppercase;
             font-weight: 600;
-            color: ${props => props.theme.fade}
+            color: ${props => props.theme.fade};
+            text-align: left;
         }
 
         .primaryColor {
