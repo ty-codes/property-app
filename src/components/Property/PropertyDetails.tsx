@@ -1,3 +1,4 @@
+import { device } from "../../constants";
 import CustomInput from "../CustomInput";
 import styled from "styled-components";
 
@@ -22,7 +23,6 @@ export default function PropertyDetails(): JSX.Element {
                             <CustomInput
                                 type="text"
                                 rightText={<span className="right-text">%</span>}
-
                             />
                         </Field>
 
@@ -127,7 +127,7 @@ const Wrapper = styled.div`
 
         div div {
             margin: 0;
-            width: 100%;
+            width: 9em;
         }
 
         div {
@@ -155,4 +155,8 @@ const Button = styled.button`
     align-items: center;
     height: 45px;
     font-size: 14px;
+
+    @media ${device.mobileM} {
+        width: 85%;
+    }
 `;

@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { Placeholder1, Placeholder2, Placeholder3 } from "../../assets";
+import { device } from "../../constants";
+
 
 export default function PropertyImages() {
     const placeholderImages = [Placeholder1, Placeholder2, Placeholder3]
     return (
         <Wrapper>
-            {/* <FirstImage src={placeholderImages[0]} alt="property" /> */}
             <Images>
                 {placeholderImages?.splice(0, placeholderImages.length)
                     .map((image) => (
@@ -29,20 +30,18 @@ const Wrapper = styled.div`
         height: 200px;
          width: 180px;
         border-radius: 10px;
+
+        @media ${device.mobileL} {
+            width: auto;
+            height: 160px;
+        }
     }
 
-`
-
-const FirstImage = styled.img`
-    width: 100%;
-    
-`
+`;
 
 const Images = styled.span`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    // justify-content: space-between;
-
 `
