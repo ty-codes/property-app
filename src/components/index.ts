@@ -59,6 +59,9 @@ import Reviews from "./Property/Reviews";
 import Sponsors from "./Property/Sponsors";
 
 
+import Checkout from "./Invest/Checkout";
+import Invest from "./Invest/Invest";
+
 
 export {
     IdVerification,
@@ -113,5 +116,7 @@ export {
     SimilarProjects,
     Graphs,
     Sponsors,
-    Reviews
+    Reviews,
+    Checkout,
+    Invest
 }

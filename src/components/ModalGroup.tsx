@@ -1,7 +1,7 @@
 import { CloseIcon } from "../assets/svg";
 import Modal from "react-modal";
 import styled from "styled-components";
-import { ListStock } from ".";
+import { ListStock, Invest } from ".";
 import { useModalContext } from '../contexts/ModalContext';
 import { ModalContextType } from '../@types/modal';
 import { device } from "../constants";
@@ -14,7 +14,8 @@ const customStyles = {
 		justifyContent: "center",
 		margin: "auto",
 		maxHeight: "100vh",
-		overflow: "auto"
+		overflow: "auto",
+		minHeight: "80vh"
 	},
 };
 
@@ -39,6 +40,8 @@ const ModalGroup = () => {
 				</Close>
 				{modalType === "listStock" ? (
 					<ListStock />
+				) : modalType === "invest" ? (
+					<Invest />
 				)
 					: 
 					<ListStock />

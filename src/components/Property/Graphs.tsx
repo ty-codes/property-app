@@ -17,7 +17,7 @@ export default function Graphs(): JSX.Element {
             el.style.backgroundColor = "transparent";
             el.style.color = "#000";
         })
-        var activeTab = document.getElementById(`tab:rr:${id}`) as HTMLElement;
+        var activeTab = document.getElementById(`tab:r0:${id}`) as HTMLElement;
         activeTab.style.backgroundColor = "#1363ff";
         activeTab.style.color = "#fff";
     }
@@ -147,13 +147,14 @@ const TabWrapper = styled(Tabs)`
 		font-size: 0.7em;
 		cursor: pointer;
 		width: 12em;
-		padding: 18px 0;
+		padding: 15px 0;
 		margin-right: 0.8px;
 		border-radius: 5px;
 
 
 		p {
-			margin: 0
+			margin: 0;
+            font-size: 12px;
 		}
 	}
 `;

@@ -3,8 +3,6 @@ import { FastArrowDown } from "../../assets/svg";
 import { fbn } from "../../assets";
 
 
-
-
 export default function PropertyDescription() {
     const stock = {
         image: fbn,
@@ -45,10 +43,8 @@ export default function PropertyDescription() {
                 of assets under management within our global investor's business. Our 
                 more than 100,000 employees serve clients in over 100 countries, including over 
                 90% of the Fortune 100.
-
             </Description>
         </>
-
     )
 }
 
@@ -63,7 +59,6 @@ const Location = styled.p`
     color: ${props  => props.theme.primaryColor};
     font-weight: 700;
     font-size: 12px;
-
 `;
 
 const Description = styled.p`
@@ -106,19 +101,6 @@ const Price = styled.div`
 
 
 `
-const Wrapper = styled.div`
-    padding: 20px;
-    border: 0.8px solid #c5d8ff;
-    border-radius: 8px;
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
-    align-items: center;
-`;
 
 const Company = styled.div`
     display: flex;

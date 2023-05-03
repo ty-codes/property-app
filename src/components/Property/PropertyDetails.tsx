@@ -1,9 +1,13 @@
 import { device } from "../../constants";
 import CustomInput from "../CustomInput";
 import styled from "styled-components";
+import { ModalContextType } from "../../@types/modal";
+import { useModalContext } from "../../contexts/ModalContext";
 
 
 export default function PropertyDetails(): JSX.Element {
+    const { changeModalType } = useModalContext() as ModalContextType;
+
     return (
         <Wrapper>
             <div>
@@ -92,7 +96,7 @@ export default function PropertyDetails(): JSX.Element {
                     </div>
                 </div>
             </div>
-            <Button className="button filled_btn">Invest Now</Button>
+            <Button className="button filled_btn" onClick={() => changeModalType("invest")}>Invest Now</Button>
         </Wrapper>
     )
 };
