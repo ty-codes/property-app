@@ -134,6 +134,8 @@ const Wrapper = styled.div`
         padding: 20px;
         flex-wrap: wrap;
         border-radius: 5px;
+        border: 1px solid #ddd;
+
 
         div div {
             margin: 0;
