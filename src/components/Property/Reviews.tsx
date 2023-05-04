@@ -97,6 +97,7 @@ const Wrapper = styled.div`
      display: flex;
      justify-content: space-between;
      width: 100%;
+     margin: 2em 0;
 
      @media ${device.isSmallDevice} {
           flex-direction: column;
@@ -108,6 +109,10 @@ const ReviewInput = styled.div`
 
      h6 {
           fontsize: 0.7em;
+     }
+
+     h3 {
+          margin: 0;
      }
 
      textarea {

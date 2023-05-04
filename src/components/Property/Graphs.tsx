@@ -31,7 +31,9 @@ export default function Graphs(): JSX.Element {
             >
                 <TabList className="tab-list">
 
-                    <Tab className="tab" onClick={() => setActiveTab("0")}>
+                    <Tab className="tab"
+                    style={{backgroundColor: "var(--primaryColor", color: "white"}}
+                    onClick={() => setActiveTab("0")}>
                         <div>
                             <p>Today</p>
                         </div>
@@ -107,29 +109,6 @@ const TabWrapper = styled(Tabs)`
     overflow: hidden;
 
 
-	span {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 1em;
-
-		a {
-			text-decoration: none;
-			font-weight: 500;
-			font-size: 12px;
-			line-height: 15px;
-			text-align: center;
-			text-transform: capitalize;
-			color: ${props => props.theme.fade};
-			cursor: pointer;
-		}
-
-		h3 {
-			font-weight: 400;
-			font-size: 14px;
-		}
-	}
-
-
 	.tab-list {
 		display: flex;
 		flex-direction: row;
@@ -145,6 +124,7 @@ const TabWrapper = styled(Tabs)`
 		background-color: transparent;
 		color: black;
 		font-size: 0.7em;
+        outline: none;
 		cursor: pointer;
 		width: 12em;
 		padding: 15px 0;
