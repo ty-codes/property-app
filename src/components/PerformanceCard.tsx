@@ -35,7 +35,9 @@ export default function PerformanceCard() {
 			</span>
 			<TabList className="tab-list">
 
-				<Tab className="tab" onClick={() => setActiveTab("0")}>
+				<Tab className="tab" 
+				style={{backgroundColor: "var(--primaryColor", color: "white"}} 
+				onClick={() => setActiveTab("0")}>
 					<div>
 						<p>Today</p>
 					</div>
@@ -125,6 +127,7 @@ const Stocks = (): JSX.Element => {
             company: "MTN Nigeria PLC(MTNN)"
         },
     ]
+
 	return (
 		<Wrapper>
 			{placeholder.slice(0, 4)?.map((stock, id) => (
@@ -313,9 +316,10 @@ const TabWrapper = styled(Tabs)`
 	.tab {
 		background-color: transparent;
 		color: black;
-		font-size: 0.7em;
+		font-size: 0.5em;
 		cursor: pointer;
 		width: 12em;
+		outline: none;
 		padding: 12px 0;
 		margin-right: 0.8px;
 		border-radius: 5px;

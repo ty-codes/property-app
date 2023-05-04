@@ -166,8 +166,9 @@ const Wrapper = styled.div`
 		display: flex;
 		align-items: center;
 		padding: 0 5px;
-		border-radius: 9.5|px;
+		border-radius: 9.5px;
 	}
+
 	.right {
 		position: absolute;
 		right: 0px;
@@ -193,7 +194,7 @@ const Wrapper = styled.div`
         margin: 0;
 		letter-spacing: 1px;
 		color: grey;
-        height: 51px;
+        height: 45px;
 		padding-left: 1.8em;
 		background-color: rgba(0, 87, 255, 0.02);
 	}
@@ -275,7 +276,7 @@ const Wrapper = styled.div`
 		text-transformm: capitalize;
 		// z-index: 1;
 		outline: none;
-		height: 51px;
+		height: 45px;
 	}
 
 	option {

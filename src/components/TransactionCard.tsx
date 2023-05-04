@@ -24,8 +24,8 @@ export default function TransactionCard() {
 		activeTab.style.color = "#fff";
 	}
 
+
 	return (
-		// <div>
 		<TabWrapper
 			className="tabs"
 			defaultIndex={keys["today"] || 0}
@@ -37,7 +37,9 @@ export default function TransactionCard() {
 			</span>
 			<TabList className="tab-list">
 
-				<Tab className="tab" onClick={() => setActiveTab("0")}>
+				<Tab className="tab" 
+				style={{backgroundColor: "var(--primaryColor", color: "white"}} 
+				onClick={() => setActiveTab("0")}>
 					<div>
 						<p>Today</p>
 					</div>
@@ -205,7 +207,6 @@ const StockItem = styled.div`
 	margin: 1em 0;
 	justify-content: space-between;
 
-
 	p {
 		margin: 0;
 	}
@@ -318,6 +319,7 @@ const TabWrapper = styled(Tabs)`
 		background-color: transparent;
 		color: black;
 		font-size: 0.7em;
+		outline: none;
 		border-radius: 5px;
 		cursor: pointer;
 		width: 12em;
