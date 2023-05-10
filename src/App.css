@@ -229,8 +229,8 @@ p {
 }
 
 .spinner-grow {
-    --bs-spinner-width: 5rem;
-    --bs-spinner-height: 5rem;
+    --bs-spinner-width: 3rem;
+    --bs-spinner-height: 3rem;
     color: #1363ff;
 }
 

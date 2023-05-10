@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 // import './SignIn.css';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
@@ -36,6 +36,7 @@ Modal.setAppElement('#root');
 export default function SignIn(): JSX.Element {
     const [access, setAccess] = useState('email');
     const { isLoggedIn, setIsLoggedIn } = useLoggedInContext() as LoggedInContextType || "";
+    const { user, setUser } = useUserContext() as UserContextType || "";
 
 
     return (
@@ -66,9 +67,9 @@ export default function SignIn(): JSX.Element {
                         </>
                     </div>
                 </div>
-                {isLoggedIn && (
+                {/* {isLoggedIn && (
                     <Navigate to={`/app`} />
-                )}
+                )} */}
             </div>
         </Wrapper>
 
@@ -76,27 +77,27 @@ export default function SignIn(): JSX.Element {
 };
 
 const PhoneLoginForm = (): JSX.Element => {
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [password, setPassword] = useState("");
     const { setUser } = useUserContext() as UserContextType;
     const { isLoggedIn, setIsLoggedIn } = useLoggedInContext() as LoggedInContextType || "";
+    const navigate = useNavigate();
 
     const authenticateUser = (data: {
         phoneNumber: string;
         password: string;
     }): void => {
         // backend auth here w/ password
-        if (data.phoneNumber === "00000000000") {
+        if (data?.phoneNumber) {
             var token: string = "12345";
             // set user object from backend
             setUser({
                 id: 1,
-                first_name: "Bolatito",
-                last_name: "Johnson",
-                email: "",
+                first_name: "John",
+                last_name: "Doe",
+                email: "user@gmail.com",
             });
             setToStorage("token", token);
             setIsLoggedIn(token);
+            navigate("/app")
         }
     }
 
@@ -114,7 +115,6 @@ const PhoneLoginForm = (): JSX.Element => {
             initialValues,
             validationSchema,
             onSubmit: (values) => {
-                console.log(values, 'phone');
                 authenticateUser(values)
             },
         });
@@ -124,6 +124,7 @@ const PhoneLoginForm = (): JSX.Element => {
                 <CustomInput
                     value={values.phoneNumber}
                     name="phoneNumber"
+                    className="last"
                     type="tel"
                     required
                     maxLength={11}
@@ -131,7 +132,7 @@ const PhoneLoginForm = (): JSX.Element => {
                     onChange={handleChange}
                     error={errors.password}
                     touched={touched.password}
-                    lefticon={<span className="tel">+234</span>}
+                    lefticon={<span>+234</span>}
                 />
                 <CustomInput
                     className=""
@@ -171,8 +172,10 @@ const PhoneLoginForm = (): JSX.Element => {
 }
 
 const EmailLoginForm = (): JSX.Element => {
-    const { setUser } = useUserContext() as UserContextType;
+    const { user, setUser } = useUserContext() as UserContextType;
     const { isLoggedIn, setIsLoggedIn } = useLoggedInContext() as LoggedInContextType || "";
+    const navigate = useNavigate();
+
 
     const authenticateUser = (data: {
         email: string;
@@ -180,17 +183,18 @@ const EmailLoginForm = (): JSX.Element => {
     }): void => {
         // backend auth here w/ password
         console.log(data)
-        if (data.email === "tito123@gmail.com") {
+        if (data?.email) {
             var token: string = "12345";
             // set user object from backend
             setUser({
                 id: 1,
-                first_name: "Bolatito",
-                last_name: "Johnson",
-                email: "",
+                first_name: "John",
+                last_name: "Doe",
+                email: data?.email,
             });
             setToStorage("token", token);
             setIsLoggedIn(token);
+            navigate("/app");
         }
     }
 
@@ -208,7 +212,6 @@ const EmailLoginForm = (): JSX.Element => {
             initialValues,
             validationSchema,
             onSubmit: (values) => {
-                console.log(values);
                 authenticateUser(values)
             },
         });

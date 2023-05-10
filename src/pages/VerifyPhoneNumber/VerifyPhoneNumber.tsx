@@ -12,7 +12,6 @@ const VerifyPhoneNumber = (): JSX.Element => {
 
     const [disable, setDisabled] = useState(true);
 
-    console.log(phoneNumber);
     useEffect(() => {
         setDisabled(false);
     }, [code.length === 4]);
@@ -33,7 +32,7 @@ const VerifyPhoneNumber = (): JSX.Element => {
         // console.log(code)
         // send code to backend
         // reroute to login
-        navigate("/signin")
+        navigate("/details")
 
     }
 
@@ -43,7 +42,7 @@ const VerifyPhoneNumber = (): JSX.Element => {
 
             <div className="page">
                 <div>
-                    <h2>OTP verificaion</h2>
+                    <h2 className="heading">OTP verificaion</h2>
                     <p>Check your inbox. We've sent you the code
                         at {censorText(phoneNumber)}
                     </p>
@@ -59,7 +58,7 @@ const VerifyPhoneNumber = (): JSX.Element => {
                             <Link className="link" to='/'>  Request again</Link>
                         </span><br />
                         <button style={{ marginTop: "1em" }} disabled={disable}
-                            type="submit" className='btn filled_btn'>Verify</button>
+                            type="submit" className='button filled_btn'>Verify</button>
                     </form>
                 </div>
             </div>

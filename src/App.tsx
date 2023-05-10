@@ -241,7 +241,11 @@ export default function App(): JSX.Element {
                 <Route path='register' element={<Register />} />
                 <Route path="verify-email" element={<VerifyEmail />} />
                 <Route path="verify-phoneNumber" element={<VerifyPhoneNumber />} />
-
+                <Route path='details' element={<Details />} />
+                <Route path='verification'>
+                    <Route index element={<VerifyIdentity />} />
+                    <Route path='stage2' element={<Onboarding />} />
+                  </Route>
 
                 {/* <Route path='resetpassword' element={
                   <div className='fp_wrap'>
@@ -268,13 +272,9 @@ export default function App(): JSX.Element {
                     <Route path='theme/:id' element={<Theme />} />
                     <Route path='property/:id' element={<Property />} />
                   </Route>
-                  <Route path='verification'>
-                    <Route index element={<VerifyIdentity />} />
-                    <Route path='stage2' element={<Onboarding />} />
-                  </Route>
-                  {user && (
+                  {/* {user && (
                     <Route path='details' element={<Details />} />
-                  )}
+                  )} */}
                 </Route>
               </Route>
             </Routes>
@@ -316,10 +316,10 @@ const AuthPagesWrapper = () => {
 
 
   useEffect(() => {
-    // if (!user || !isLoggedIn) {
-    //   console.log(user, isLoggedIn)
-    //   navigate("/");
-    // }
+    if (!user || !isLoggedIn) {
+      console.log(user, isLoggedIn)
+      navigate("/");
+    }
   }, []);
 
   return (

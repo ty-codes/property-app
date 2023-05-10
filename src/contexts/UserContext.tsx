@@ -14,7 +14,7 @@ const UserProvider = ({ children }: {children: ReactNode}) => {
         DOB: "Jan 17th 2000"
     }
 
-    setToStorage("user", userPlaceholder)
+    // setToStorage("user", userPlaceholder)
     const [user, setUser] = useState<IUser | null>(getFromStorage("user"));
     
 	useEffect(() => {

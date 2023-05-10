@@ -11,8 +11,6 @@ const VerifyEmail = (): JSX.Element => {
     const email = searchParams.get("email")
     const [disable, setDisabled] = useState(true);
 
-    console.log(email);
-
     useEffect(() => {
         setDisabled(false);
     }, [code.length === 4]);
@@ -43,8 +41,7 @@ const VerifyEmail = (): JSX.Element => {
         // console.log(code)
         // send code to backend
         // reroute to login
-        navigate("/signin")
-
+        navigate("/details")
     }
 
     return (
@@ -59,10 +56,10 @@ const VerifyEmail = (): JSX.Element => {
                     </p>
                     <form onSubmit={(e) => { verifyCode(e) }}>
                         <div className="code">
-                            <input type='text' maxLength={1} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { code[0] = e.target.value; setCode(code); console.log(code, code.length) }} />
-                            <input type='text' maxLength={1} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { code[1] = e.target.value; setCode(code); console.log(code, code.length) }} />
-                            <input type='text' maxLength={1} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { code[2] = e.target.value; setCode(code); console.log(code, code.length) }} />
-                            <input type='text' maxLength={1} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { code[3] = e.target.value; setCode(code); console.log(code, code.length) }} />
+                            <input type='text' maxLength={1} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { code[0] = e.target.value; setCode(code); }} />
+                            <input type='text' maxLength={1} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { code[1] = e.target.value; setCode(code); }} />
+                            <input type='text' maxLength={1} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { code[2] = e.target.value; setCode(code); }} />
+                            <input type='text' maxLength={1} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { code[3] = e.target.value; setCode(code); }} />
 
                         </div>
                         <h6 className="request">

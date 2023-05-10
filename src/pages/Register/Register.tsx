@@ -146,7 +146,6 @@ const EmailSignupForm = ({ setShowCodeForm }: { setShowCodeForm: React.Dispatch<
             initialValues,
             validationSchema,
             onSubmit: (values) => {
-                console.log(values);
                 navigate(`/verify-email?email=${values.email}`);
             },
         });
@@ -187,8 +186,6 @@ const EmailSignupForm = ({ setShowCodeForm }: { setShowCodeForm: React.Dispatch<
 }
 
 const PhoneSignUpForm = ({ setShowCodeForm }: { setShowCodeForm: React.Dispatch<React.SetStateAction<boolean>> }): JSX.Element => {
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [password, setPassword] = useState("");
     const { setUser } = useUserContext() as UserContextType;
     const { isLoggedIn, setIsLoggedIn } = useLoggedInContext() as LoggedInContextType || "";
     const navigate = useNavigate();
@@ -206,7 +203,6 @@ const PhoneSignUpForm = ({ setShowCodeForm }: { setShowCodeForm: React.Dispatch<
             initialValues,
             validationSchema,
             onSubmit: (values) => {
-                console.log(values);
                 navigate(`/verify-phoneNumber?phoneNumber=${values.phoneNumber}`);
             },
         });
@@ -215,6 +211,7 @@ const PhoneSignUpForm = ({ setShowCodeForm }: { setShowCodeForm: React.Dispatch<
             <>
                 <CustomInput
                     value={values.phoneNumber}
+                    className="last"
                     name="phoneNumber"
                     type="tel"
                     required

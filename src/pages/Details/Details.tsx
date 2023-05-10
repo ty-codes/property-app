@@ -117,7 +117,7 @@ const Details = (): JSX.Element => {
                                   <img src={partyhatIcon} alt='congratulations_icon' />
                                   <h2>Congratulations</h2>
                                   <p style={{ padding: " 0 0.7em" }} className='capitalize'>Your account is finished and ready to explore</p>
-                                  <button style={{alignSelf: "center"}} className='btn filled_btn' onClick={() => { setActiveStep(activeStep + 1) }}>Let's Go</button>
+                                  <button style={{alignSelf: "center"}} className='button filled_btn' onClick={() => { setActiveStep(activeStep + 1) }}>Let's Go</button>
                                 </div>
 
                               )
@@ -151,7 +151,7 @@ const Details = (): JSX.Element => {
                      
                       disabled={!(password) && true}
                       onClick={() => { setActiveStep(activeStep + 1); updateUserData() }}
-                      className={activeStep === 3 ? "btn filled_btn" : "btn filled_btn blank"}
+                      className={activeStep === 3 ? "button filled_btn" : "button filled_btn blank"}
                     >
                       Finish
                     </button>
