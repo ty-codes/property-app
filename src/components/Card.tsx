@@ -60,8 +60,7 @@ const Wrapper = styled.div<IWrapper>`
     background-image: url(${props => props.bg});
     border-radius: 10px;
     color: white;
-    height: 280px; 
-    // margin: 1em;
+    max-height: 280px; 
     position: relative;
     margin: 0.5em 0.5em 0.5em 0;
 

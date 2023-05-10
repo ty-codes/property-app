@@ -316,7 +316,6 @@ const TabWrapper = styled(Tabs)`
 	.tab {
 		background-color: transparent;
 		color: black;
-		font-size: 0.5em;
 		cursor: pointer;
 		width: 12em;
 		outline: none;
@@ -326,7 +325,12 @@ const TabWrapper = styled(Tabs)`
 
 
 		p {
-			margin: 0
+			margin: 0;
+			font-size: 12px;
+
+			@media ${device.mobileL} {
+				font-size: 10px;
+			}
 		}
 	}
 `;

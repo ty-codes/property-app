@@ -60,14 +60,16 @@ const Wrapper = styled(Navbar)`
     display: flex;
     padding: 0 5px;
     justify-content: space-between;
-    // position: fixed;
-    // top: 0;
-    // width: 100%;
     background: white;
 
     div {
         display: flex;
         align-items: center;
+
+        svg {
+            width: 40px;
+            heigh: 40px;
+        }
     }
 
 
@@ -100,12 +102,8 @@ const Wrapper = styled(Navbar)`
         margin: 0em !important;
         position: absolute;
         right: 10px;
-        top: 30px;
-    }
-    
-    button.navbar-toggler.collapsed {
-        right: 10px;
-        top: 10px;
+        top: 20px;
+        border: none;
     }
 
     .navbar-brand {

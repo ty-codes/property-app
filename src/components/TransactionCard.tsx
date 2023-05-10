@@ -327,7 +327,12 @@ const TabWrapper = styled(Tabs)`
 		margin-right: 0.8px;
 
 		p {
-			margin: 0
+			margin: 0;
+			font-size: 12px;
+
+			@media ${device.mobileL} {
+				font-size: 10px;
+			}
 		}
 	}
 `

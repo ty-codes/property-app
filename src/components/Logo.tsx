@@ -7,7 +7,7 @@ export default function Logo() {
     return (
     <Wrapper>
             <LogoIcon />
-            <span>Property</span>
+            <span></span>
       </Wrapper>
     )
 };

@@ -3,6 +3,7 @@ import logo from '../assets/logo.png';
 import { building } from '../assets';
 import { useLocation, Link } from 'react-router-dom';
 import { useState } from 'react';
+import { device } from '../constants';
 
 interface IWrapper {
     bg?: string,
@@ -62,6 +63,8 @@ const Wrapper = styled.div<IWrapper>`
             height: 100%;
             flex-direction: column;
             justify-content: space-between;
+            overflow: hidden;
+            height: 100vh;
         }
     }
 
@@ -119,7 +122,20 @@ const Wrapper = styled.div<IWrapper>`
             align-self: center;
             border-radius: 10px;
             position: absolute;
-            bottom: 10px;
+            bottom: 20px;
+        }
+
+        @media ${device.mobileL} {
+            .heading {
+                font-size: 25px;
+            }
+            .subtitle {
+                font-size: 13px;
+            }
+        
+            .policy, .policy_link {
+                font-size: 0.64em;
+            }
         }
 
         button {
