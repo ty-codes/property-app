@@ -61,7 +61,7 @@ import Sponsors from "./Property/Sponsors";
 
 import Checkout from "./Invest/Checkout";
 import Invest from "./Invest/Invest";
-
+import PaymentInformation from "./Invest/PaymentInformation";
 
 export {
     IdVerification,
@@ -118,5 +118,6 @@ export {
     Sponsors,
     Reviews,
     Checkout,
-    Invest
+    Invest,
+    PaymentInformation
 }
