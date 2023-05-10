@@ -65,11 +65,6 @@ const Wrapper = styled(Navbar)`
     div {
         display: flex;
         align-items: center;
-
-        svg {
-            width: 40px;
-            heigh: 40px;
-        }
     }
 
 
@@ -97,17 +92,32 @@ const Wrapper = styled(Navbar)`
     }
 
     button.navbar-toggler.collapsed {
-        padding: 8px;
+        padding: 0;
         width: 2.5em;
         margin: 0em !important;
         position: absolute;
         right: 10px;
         top: 20px;
         border: none;
+        outline: none;
+    }
+
+    button {
+        outline: none;
     }
 
     .navbar-brand {
         padding: 0 !important;
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            text-decoration: none;
+            outline: none;
+            box-shadow: none;
+        }
     }
 
 `;

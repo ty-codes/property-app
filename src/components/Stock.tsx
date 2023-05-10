@@ -26,7 +26,7 @@ export default function Stock({ stock, id }: { stock: IStock, id: number }) {
                 </div>
             </Company>
 
-            <h5>{Number(stock.price).toFixed(2)}</h5>
+            <h5>&#8358; {Number(stock.price).toFixed(2)}</h5>
 
         </Wrapper>
     )

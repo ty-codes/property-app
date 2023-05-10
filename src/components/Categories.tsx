@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { themes } from "../constants";
+import spiral from "../assets/spiral.png";
 
+interface IProps {
+    bg?: string
+}
 export default function Categories() {
     return (
         <>
@@ -9,7 +13,11 @@ export default function Categories() {
             </Header>
             <Wrapper>
                 {themes.slice(0, 7).map((category, id) => (
-                    <Category key={`category-ra-${id}`} style={{ backgroundColor: `${category.background}` }} >
+                    <Category 
+                    key={`category-ra-${id}`} 
+                    style={{ backgroundColor: `${category?.background}` }} 
+                    bg={spiral}
+                    >
                         <span>
                             <img src={category.image} alt="bank" />
                         </span>
@@ -43,14 +51,13 @@ const Wrapper = styled.div`
     padding-bottom: 0.8em;
 `;
 
-const Category = styled.div`
-height: 280px;
+const Category = styled.div<IProps>`
+    height: 280px;
     width: 250px;
     margin: 0 0.8em 0 0;
     border-radius: 10px;
     flex-shrink: 0;
     position: relative;
-    /* padding: 20px; */
     border: none;
 
     img {
@@ -83,9 +90,10 @@ height: 280px;
     }
 
     span {
-        background-image: url(../../assets/spiral.png);
+        background-image: url(${props => props.bg});
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
         display: flex;
         justify-content: center;
         padding: 1em;

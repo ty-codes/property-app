@@ -34,4 +34,14 @@ const Wrapper = styled.div`
         font-size: 0.9em;
       }
     } 
+
+    svg {
+      width: 50px;
+      height: 50px;
+
+      @media ${device.isSmallDevice} {
+        width: 40px;
+        height: 40px;
+    }
+  }
 `;
