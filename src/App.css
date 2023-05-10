@@ -77,7 +77,7 @@ p {
 } */
 
 .outlet {
-    padding-inline: 20px;
+    padding-inline: 10px;
     overflow-x: hidden;
 }
 
@@ -368,7 +368,8 @@ p {
 @media (max-width: 520px) {
     #homewrapper {
         flex-direction: column;
-
+        height: 100vh;
+        overflow-y: hidden;
     }
 
     .page {
