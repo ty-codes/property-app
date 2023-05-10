@@ -28,7 +28,7 @@ export default function MaritalStatus ({ setStep }:
                     <div className="badge" onClick={() => setEmploymentStatus("retired")}>Retired</div>
                 </div>
                 
-                <button onClick={() => setStep(2)} style={{ alignSelf: "baseline" }} className='btn filled_btn'>Continue</button>
+                <button onClick={() => setStep(2)} style={{ alignSelf: "baseline" }} className='button filled_btn'>Continue</button>
             </div>
         </div>
 

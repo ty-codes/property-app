@@ -17,7 +17,7 @@ export default function Address({ setStep }:
                         />
                     </div>
 
-                    <button onClick={() => setStep(4)} style={{ alignSelf: "baseline" }} className='btn filled_btn'>Continue</button>
+                    <button onClick={() => setStep(4)} style={{ alignSelf: "baseline" }} className='button filled_btn'>Continue</button>
                 </div>
             </div>
 

@@ -25,7 +25,7 @@ export default function Nationality ({ setStep }:
                 </select>
                 </div>
                 
-                <button onClick={() => setStep(1)} style={{ alignSelf: "baseline" }} className='btn filled_btn'>Continue</button>
+                <button onClick={() => setStep(1)} style={{ alignSelf: "baseline" }} className='button filled_btn'>Continue</button>
             </div>
         </div>
 

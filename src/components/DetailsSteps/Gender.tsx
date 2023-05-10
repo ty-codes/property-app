@@ -28,7 +28,7 @@ const Gender = ({ gender, setGender, activeStep, setActiveStep }:
             <button
                 style={{marginTop: "1em"}}
                 disabled={!(gender) && true}
-                className={activeStep === 3 ? "btn filled_btn blank" : "btn filled_btn"}
+                className={activeStep === 3 ? "button filled_btn blank" : "button filled_btn"}
                 onClick={() => { var step = activeStep + 1; setActiveStep(step) }}>
                 Next
             </button>

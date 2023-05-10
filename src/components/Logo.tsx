@@ -6,8 +6,8 @@ import { device } from "../constants";
 export default function Logo() {
     return (
     <Wrapper>
-            <LogoIcon />
-            <span></span>
+        <LogoIcon />
+        <span></span>
       </Wrapper>
     )
 };

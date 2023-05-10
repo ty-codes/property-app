@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import styled from "styled-components";
 import { Logo as LogoIcon } from "../assets/svg";
+import { logout } from "../constants";
 
 
 export default function NavBar() {
@@ -42,6 +43,8 @@ export default function NavBar() {
                                     <Filled onClick={() => changeModalType("listStock")}>List stock <PlusOutlined /></Filled>
                                     <Badge>John Doe
                                         <span > <UserOutlined /></span>
+                                    </Badge>
+                                    <Badge onClick={() => logout()}>Logout
                                     </Badge>
                                 </Nav>
 

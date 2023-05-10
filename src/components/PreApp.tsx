@@ -8,7 +8,7 @@ const PreApp = (): JSX.Element => {
                 <img className='preapp-hero' src={hero} alt="hero" />
                 <h2 style={{fontSize: "1.8em", marginBottom: "1em"}} className="capitalize">now let's get to the good part</h2>
 
-                <button style={{alignSelf: "center"}} className="btn filled_btn">
+                <button style={{alignSelf: "center"}} className="button filled_btn">
                     <Link to={`/verification`}>Continue</Link>
                 </button>
             </div>

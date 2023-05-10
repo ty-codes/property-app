@@ -145,7 +145,7 @@ export default function InvestmentStatus() {
 
 
 
-                    <button onClick={() => navigate("/app")} style={{ alignSelf: "baseline" }} className='btn filled_btn'>Continue</button>
+                    <button onClick={() => navigate("/signin")} style={{ alignSelf: "baseline" }} className='button filled_btn'>Continue</button>
                 </div>
             </div>
 

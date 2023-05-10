@@ -122,7 +122,7 @@ export default function EmploymentStatus({ setStep }:
                         </div>
                     </div>
 
-                    <button onClick={() => setStep(3)} style={{ alignSelf: "baseline" }} className='btn filled_btn'>Continue</button>
+                    <button onClick={() => setStep(3)} style={{ alignSelf: "baseline" }} className='button filled_btn'>Continue</button>
                 </div>
             </div>
 

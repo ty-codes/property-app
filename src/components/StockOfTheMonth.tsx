@@ -1,18 +1,20 @@
-import { graph, dangote } from "../assets";
+import { useNavigate } from "react-router-dom";
+import { graph, fbn } from "../assets";
 import styled from "styled-components";
 
 export default function StockOfTheMonth ():JSX.Element {
     var mover =  {
-        image: dangote,
-        name: "dangote",
+        image: fbn,
+        name: "CBRE",
         website: "dangote.com",
         price: "600"
     };
+    const navigate = useNavigate();
 
     return (
         <Wrapper>
             <p>Stock of the month</p>
-            <Stock>
+            <Stock onClick={() => navigate("property/1")}>
                 <div className="company">
                     <span className="logo">
                         <img src={mover.image} alt="company-logo" />

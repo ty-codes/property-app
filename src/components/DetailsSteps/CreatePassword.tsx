@@ -18,7 +18,7 @@ const CreatePassword = ({ password, setPassword, activeStep, setActiveStep, setS
                     value={password}
                     onChange={(e) => setPassword(e.target.value)} name='confirm-password' type='password' required />
 
-                <button type="submit" className="btn filled_btn" onClick={() => { setShow(true) }}>Set Password</button>
+                <button type="submit" className="button filled_btn" onClick={() => { setShow(true) }}>Set Password</button>
             </form>
         </div>
     )

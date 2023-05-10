@@ -19,6 +19,8 @@ const CustomInput = (props: ICustomInput): JSX.Element => {
 			<Wrapper style={{ justifyContent: "space-around" }}>
 				{others?.lefticon && <span className="left">{others?.lefticon}</span>}
 				<input type={type} {...others} />
+				{others?.rightText && <span className="right">{others?.rightText}</span>}
+
 			</Wrapper>
 		)
 	}
@@ -161,12 +163,11 @@ const Wrapper = styled.div`
 	.left {
 		position: absolute;
 		left: 0px;
-		background-color: white;
+		background-color: transparent;
 		height: 100%;
 		display: flex;
 		align-items: center;
 		padding: 0 5px;
-		border-radius: 9.5px;
 	}
 
 	.right {
@@ -213,8 +214,9 @@ const Wrapper = styled.div`
 		background-color: rgba(0, 87, 255, 0.02);
 	}
 
-	input[type="tel"] {
-		margin-left: 1em;
+	.last {
+		text-align: end;
+		padding-right: 10px;
 	}
 
 	input::placeholder {
