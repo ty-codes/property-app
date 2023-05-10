@@ -89,10 +89,6 @@
     
 }
 @media (max-width: 800px) {
-   
-    .heading {
-        /* font-size: 28px; */
-    }
     #home .subtitle {
         font-size: 1em;
     }
@@ -105,10 +101,7 @@
     .register {
         width: 500px;
     }
-    #home .heading {
-        /* font-size: 31px; */
-        /* margin-top: 1em; */
-    }
+    
     #home .subtitle {
         margin: 1em 0;
     }
@@ -136,12 +129,7 @@
 }
 
 @media (max-width: 420px) {
-    #home .heading {
-        /* font-size: 29px; */
-    }
-    #home .btn {
-        height: 4em;
-    }
+    
     .home_wrap .building .logo {
         width: 51px;
     }
