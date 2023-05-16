@@ -296,8 +296,12 @@ const Divider = styled.div`
     span {
         padding: 0px 10px;
         font-weight: bold;
+        font-size: 13px;
     }
 
+    @media (max-width: 520px) {
+        justify-content: start;
+    }
 `;
 
 const Tabs = styled.div`
@@ -305,6 +309,7 @@ const Tabs = styled.div`
     display: flex;
     justify-content: center;
     margin: 1em auto;
+    font-size: 14px;
 
     @media (max-width: 340px) {
         width: 17.7em;

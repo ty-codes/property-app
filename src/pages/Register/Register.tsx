@@ -227,11 +227,11 @@ const PhoneSignUpForm = ({ setShowCodeForm }: { setShowCodeForm: React.Dispatch<
                 type="submit"
 
             >Continue</button>
-            <div className="divider">
+            <Divider>
                 <div></div>
                 <span>OR</span>
                 <div></div>
-            </div>
+            </Divider>
             <>
                 <button className='button outlined_btn'><Span><img src={googleIcon} alt='google_icon' />Continue with Google</Span></button>
                 <br />
@@ -271,6 +271,12 @@ const Divider = styled.div`
     span {
         padding: 0px 10px;
         font-weight: bold;
+        font-size: 13px;
+
+    }
+
+    @media (max-width: 520px) {
+        justify-content: start;
     }
 
 `;
@@ -280,6 +286,11 @@ const Tabs = styled.div`
     display: flex;
     justify-content: center;
     margin: 1em auto;
+
+    span {
+        font-size: 14px;
+
+    }
 
     @media (max-width: 340px) {
         width: 17.7em;
