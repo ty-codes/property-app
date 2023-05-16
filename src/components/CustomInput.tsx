@@ -168,6 +168,7 @@ const Wrapper = styled.div`
 		display: flex;
 		align-items: center;
 		padding: 0 5px;
+		font-size: 0.8rem;
 	}
 
 	.right {
@@ -190,7 +191,7 @@ const Wrapper = styled.div`
 		width: 100%;
 		font-style: normal;
 		font-weight: 700;
-		font-size: 0.9em;
+		font-size: 0.6rem;
 		flex: 1;
         margin: 0;
 		letter-spacing: 1px;
@@ -198,6 +199,8 @@ const Wrapper = styled.div`
         height: 45px;
 		padding-left: 1.8em;
 		background-color: rgba(0, 87, 255, 0.02);
+		text-align: end;
+		padding-right: 10px;
 	}
 
 	input[type="textarea"] {
@@ -205,13 +208,15 @@ const Wrapper = styled.div`
 		outline: none;
 		font-style: normal;
 		font-weight: 700;
-		font-size: 1em;
+		font-size: 0.6rem;
 		flex: 1;
         margin: 0;
 		letter-spacing: 1px;
 		color: grey;
         height: 180px;
 		background-color: rgba(0, 87, 255, 0.02);
+		text-align: end;
+		padding-right: 10px;
 	}
 
 	.last {
@@ -222,7 +227,7 @@ const Wrapper = styled.div`
 	input::placeholder {
 		font-style: normal;
 		font-weight: 700;
-		font-size: 0.8rem;
+		font-size: 0.6rem;
 		color: #aaa;
 	}
 	
