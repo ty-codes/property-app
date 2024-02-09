@@ -59,7 +59,7 @@
     outline: none;
     font-style: normal;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.8rem;
     flex: 1;
     margin: 0;
     letter-spacing: 1px;
@@ -117,6 +117,10 @@
     font-size: 1.1em;
 }
 
+.onboarding-step label {
+    font-size: 0.9em;
+}
+
 @media (max-width: 768px) {
     .onboarding-page>div {
         width: 90%;
@@ -133,9 +137,6 @@
 
 
 @media (max-width: 400px) {
-    .onboarding-step h2{
-        font-size: 1.3em;
-    }
     .onboarding-step p {
         font-size: 0.8em;
     }
@@ -145,6 +146,17 @@
     .onboarding-step .input-wrapper div {
        width: 16em;
     }
-    
+    .onboarding-step h2, h3{
+        font-size: 0.9em;
+    }
+    .onboarding-step label {
+        font-size: 0.8em;
+    }
+    .badge label{
+        font-size: 1em;
+    }
+    .badge {
+        font-size: 0.7em;
+    }
 }
 

@@ -201,6 +201,11 @@ const Wrapper = styled.div`
 		background-color: rgba(0, 87, 255, 0.02);
 		text-align: end;
 		padding-right: 10px;
+		min-width: 270px;
+
+		@media ${device.mobileS} {
+			min-width: 170px;
+		}
 	}
 
 	input[type="textarea"] {
